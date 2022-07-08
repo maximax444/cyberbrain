@@ -59,6 +59,7 @@
         span
             transform: skewX(-20deg)
             display: flex
+            transition: all 0.3s
             align-items: center
         &:hover
             transform: skewX(-20deg)
@@ -395,7 +396,7 @@
             font-size: 18px
             line-height: 22px
             text-transform: uppercase
-            color: #FFFFFF
+            color: #000
             text-decoration: none
             padding: 22px 27px
             position: relative
@@ -409,8 +410,8 @@
                 left: 0
                 border-bottom: 58px solid #51FD97
                 border-right: 30px solid transparent
-                border-left: 0
-                transition: all 0.6s
+                border-left: 0px solid transparent
+                transition: all 0.2s
             &::after
                 content: ""
                 width: calc(100% - 30px)
@@ -420,20 +421,20 @@
                 bottom: 0
                 right: 0
                 border-top: 58px solid #51FD97
-                border-right: 0
+                border-right: 0px solid transparent
                 border-left: 30px solid transparent
-                transition: all 0.6s
+                transition: all 0.2s
             span
                 position: relative
                 z-index: 2
             &:hover
                 color: #000
                 &::before
-                    border-right: 0
+                    border-right: 0px solid transparent
                     border-left: 30px solid transparent
                     border-bottom: 58px solid #FEFF00
                 &::after
-                    border-left: 0
+                    border-left: 0px solid transparent
                     border-right: 30px solid transparent
                     border-top: 58px solid #FEFF00
         &__wrap
