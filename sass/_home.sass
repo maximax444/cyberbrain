@@ -1,19 +1,24 @@
 .main
     height: 911px
     padding-top: 275px
-    video
+    overflow: hidden
+    .video
         width: auto
-        height: 100%
+        height: 911px
         position: absolute
         top: 0
         right: 0
+        video
+            width: auto
+            height: 100%
     .container
         position: relative
         z-index: 2
-    &::after
+    .after
         content: ""
         width: 44px
         height: 47px
+        z-index: 2
         position: absolute
         left: 57px
         top: 675px
@@ -21,10 +26,11 @@
         background: url('../img/main/main-bottom.svg') center no-repeat
         background-size: contain
         animation: arrow 2s infinite ease
-    &::before
+    .before
         content: ""
         width: 202px
         height: 550px
+        z-index: 2
         position: absolute
         left: 0px
         bottom: 0px
@@ -60,23 +66,29 @@
         text-decoration: none
         text-transform: uppercase
         color: #FEFF00
-        border: 4px solid #FEFF00
-        transform: skewX(20deg)
+        position: relative
         img
             margin-left: 15px
         span
+            position: absolute
+            top: 0
+            left: 0
+            border: 4px solid #FEFF00
             transform: skewX(-20deg)
+            width: 100%
+            height: 100%
+            justify-content: center
+            align-items: center
             display: flex
             transition: all 0.3s
             align-items: center
         &:hover
-            transform: skewX(-20deg)
             span
                 transform: skewX(20deg)
 .home
     &-about
         position: relative
-        &::after
+        .after
             content: ""
             background: linear-gradient(169.74deg, rgba(81, 253, 151, 0.51) 9.78%, rgba(161, 0, 207, 0.4) 61.51%)
             filter: blur(175px)
@@ -144,9 +156,8 @@
                 & > img
                     transform: scale(1.1)
     &-brands
-        padding-top: 100px
         position: relative
-        &::after
+        .after
             content: ""
             display: block
             background: linear-gradient(167.57deg, rgba(81, 253, 151, 0.35) 41.38%, rgba(161, 0, 207, 0.3) 86.98%)
@@ -165,7 +176,7 @@
             align-items: center
         &__block
             position: relative
-          
+
             span
                 position: absolute
                 top: 0
@@ -190,39 +201,43 @@
             border-top: 20px solid #000
             border-left: 20px solid transparent
             border-right: 20px solid transparent
-            position: relative
+            position: absolute
             left: 50%
             margin-left: -300px
-            top: 20px
+            top: 0px
             display: flex
             justify-content: center
             align-items: flex-end
             transition: all 0.3s
+            animation: trapetionAnim2 3s infinite
             &::after
                 content: ''
                 z-index: -1
                 position: absolute
-                top: -20px
+                bottom: -1px
                 left: -21px
+                transition: all 0.3s
                 height: 0
                 width: 561px
                 border-top: 21px solid #626161
                 border-left: 21px solid transparent
                 border-right: 21px solid transparent
+                animation: trapetionAnimIn2 3s infinite
         &__trap
             height: 0
             width: 80px
             border-bottom: 20px solid #000
             border-left: 20px solid transparent
             border-right: 20px solid transparent
-            position: relative
+            position: absolute
             left: 50%
             margin-left: -40px
-            bottom: 20px
+            bottom: 0px
             display: flex
             justify-content: center
             align-items: flex-end
             transition: all 0.3s
+            animation: trapetionAnim 3s infinite
             &::after
                 content: ''
                 z-index: -1
@@ -234,10 +249,11 @@
                 border-bottom: 21px solid #626161
                 border-left: 21px solid transparent
                 border-right: 21px solid transparent
+                animation: trapetionAnimIn 3s infinite
     &-modules
         position: relative
         padding: 155px 0
-        &::after
+        .after
             content: ""
             width: 637px
             height: 969px
@@ -308,7 +324,7 @@
         padding-top: 160px
         padding-bottom: 120px
         position: relative
-        &::after
+        .after
             content: ""
             background: #FEFF00
             opacity: 0.4
@@ -480,3 +496,181 @@ a.home-modules__block:hover
     &::before
         width: 25px
         height: 25px
+@media(max-width: 1449px)
+    .home-portfolio .after
+        width: 400px
+        right: -200px
+@media(max-width: 1349px)
+    .home-portfolio .after
+        width: 400px
+        right: -250px
+@media(max-width: 1299px)
+    .home-portfolio .after
+        width: 300px
+        right: -250px
+@media(max-width: 1199px)
+    .main .video
+        overflow: hidden
+        video
+            margin-right: -200px
+@media (max-width: 991px)
+    .home
+        &-brands
+            &__wrap
+                flex-wrap: wrap
+            &__block
+                width: 33%
+                text-align: center
+                span
+                    text-align: center
+        &-modules__wrap
+            grid-template-columns: repeat(2, 1fr)
+        &-about
+            &__title
+                padding: 30px
+                font-size: 36px
+                line-height: 40px
+            &__play
+                bottom: 30px
+                left: 50px
+        &-marketing
+            &__wrap
+                background: url(../img/main/mark-bg.png) 70% 50% no-repeat
+        &-portfolio
+            &__cont
+                padding: 40px
+            &__logo
+                margin-bottom: 40px
+            &__num
+                font-size: 42px
+                min-width: 100px
+            &__text
+                font-size: 14px
+    .main
+        .after
+            top: auto
+            left: 15px
+            bottom: 40px
+        .video
+            video
+                margin-right: -400px
+@media (max-width: 767px)
+    .main
+        height: auto
+        padding-bottom: 200px
+        padding-top: 400px
+        .video
+            height: 500px
+            video
+                margin-right: 0
+    .home
+        &-brands
+            &__title
+                width: 400px
+                margin-left: -200px
+                font-size: 18px
+                &::after
+                    width: 361px
+        &-about__title
+            padding: 15px
+        &-marketing
+            &__wrap
+                padding-left: 40px
+                padding-right: 20px
+            &__title
+                padding-top: 90px
+@media (max-width: 575px)
+    .home
+        &-marketing
+            padding-bottom: 40px
+            &__wrap
+                display: flex
+                flex-direction: column
+                justify-content: flex-end
+                height: 600px
+                padding: 40px 20px
+                background: url('../img/main/market-mob.svg') center no-repeat
+            &__title
+                padding: 0
+                font-size: 25px
+                line-height: 115.5%
+                margin-bottom: 53px
+            &__btn
+                font-size: 16px
+                line-height: 19px
+                width: 100%
+        &-portfolio
+            padding-top: 60px
+            &__block
+                display: block
+            &__cont
+                width: 100%
+                padding: 40px 30px
+                &::after
+                    display: none
+            &__arrows
+                width: 80px
+                right: 50%
+                margin-right: -40px
+                bottom: -80px
+            &__el
+                display: block
+            &__video
+                &::after
+                    top: 50px
+        &-about
+            &__wrap
+                display: block
+            &__title
+                width: 100%
+                font-size: 30px
+                line-height: 115.5%
+                padding: 45px
+                background: linear-gradient(180deg, #411698 -20.03%, rgba(65, 22, 152, 0) 108.82%)
+            &__video
+                width: 100%
+        &-modules
+            padding-bottom: 60px
+            padding-top: 60px
+            &__wrap
+                display: block
+            &__block
+                padding: 35px 30px
+            &__descr
+                font-size: 16px
+            &__title
+                margin-bottom: 50px
+                font-size: 25px
+                line-height: 117.02%
+        &-brands
+            &__block
+                width: 100%
+            &__title
+                width: 280px
+                margin-left: -140px
+                line-height: normal
+                &::after
+                    width: 241px
+    .main
+        padding-bottom: 140px
+        &__title
+            font-size: 30px
+            line-height: 115.5%
+            margin-bottom: 33px
+        &__descr
+            font-size: 16px
+            line-height: 160%
+            letter-spacing: -0.02em
+            margin-bottom: 40px
+        .after
+            display: none
+        &__btn
+            width: 240px
+            font-size: 16px
+            line-height: 19px
+            img
+                display: none
+        .video
+            height: 425px
+            video
+                margin-right: -90px

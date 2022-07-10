@@ -3,24 +3,43 @@
  margin: auto
  &__large
   padding: 0 57px
+@media (max-width: 1259px)
+ .container
+  &__large
+   padding: 0
+   width: 1150px
+   margin: auto
+   position: relative
 @media (max-width: 1199px)
  .container
   width: 980px
   margin: auto
+  &__large
+   width: 980px
+   margin: auto
 @media (max-width: 991px)
  .container
   width: 740px
   margin: auto
+  &__large
+   width: 740px
+   margin: auto
 @media (max-width: 767px)
  .container
   width: 550px
   margin: auto
+  &__large
+   width: 550px
+   margin: auto
 @media (max-width: 575px)
  .container
   width: 100%
   padding-left: 6.25vw
   padding-right: 6.25vw
   margin: auto
+  &__large
+   width: 100%
+   margin: auto
 .section__title
  font-family: 'JetBrains Mono', monospace
  font-weight: 700
@@ -29,7 +48,6 @@
  color: #FFFFFF
  margin-top: 0
  margin-bottom: 64px
-
 
 .footer
  padding-top: 49px
@@ -51,6 +69,7 @@
   position: absolute
   left: 57px
   top: -4px
+  animation: trippleRotate 3s infinite
   display: block
   background: url('../img/main/points.svg') center no-repeat
  &__wrap
@@ -81,25 +100,27 @@
  top: 0
  left: 0
  width: 100%
- z-index: 2
- &::after
-  content: ""
-  width: calc(100% - 170px)
-  height: 2px
-  position: absolute
-  left: 57px
-  top: 60px
-  display: block
-  background-color: #FEFF00
- &::before
-  content: ""
-  width: 41px
-  height: 9px
-  position: absolute
-  right: 57px
-  top: 56px
-  display: block
-  background: url('../img/main/points.svg') center no-repeat
+ z-index: 3
+ .container__large
+  &::after
+   content: ""
+   width: calc(100% - 170px)
+   height: 2px
+   position: absolute
+   left: 57px
+   top: 60px
+   display: block
+   background-color: #FEFF00
+  .after
+   content: ""
+   width: 41px
+   height: 9px
+   position: absolute
+   right: 57px
+   top: 56px
+   display: block
+   animation: trippleRotate 2s infinite
+   background: url('../img/main/points.svg') center no-repeat
  &__wrap
   display: flex
   justify-content: space-between
@@ -235,3 +256,136 @@
   grid-gap: 15px 35px
   &>li>a
    padding-bottom: 10px
+.preloader
+ background-color: #000
+ display: flex
+ justify-content: center
+ align-items: center
+ position: fixed
+ top: 0
+ left: 0
+ width: 100vw
+ height: 100vh
+ z-index: 99
+ .g1
+  animation: fadeInRightt 3s infinite
+  path
+   animation: fadeInDownn 3s infinite
+   &:nth-child(1), &:nth-child(2)
+    animation: fadeInUpp 3s infinite
+ .g2
+  animation: fadeInLeftt 3s infinite
+  path
+   animation: fadeInDownn 3s infinite
+   &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
+    animation: fadeInUpp 3s infinite
+@media(max-width: 1259px)
+ .header
+  .container__large
+   &::after
+    left: 0px
+    top: -60px
+    width: calc(100% - 60px)
+   .after
+    right: 0px
+    top: -64px
+@media(max-width: 1199px)
+ .footer
+  &__partners, &__main
+   grid-gap: 15px
+  &__polit
+   font-size: 14px
+@media (max-width: 991px)
+ .header__menu
+  max-width: 260px
+  grid-gap: 10px 15px
+ .footer
+  &__partners
+   margin-right: 15px
+@media (max-width: 767px)
+ .footer
+  &__wrap
+   flex-wrap: wrap
+   justify-content: space-between
+   grid-gap: 15px
+ .header
+  padding: 0
+  .container__large
+   padding: 27px 0
+   .after
+    animation: none
+    top: 15px
+    z-index: 2
+    height: 40px
+   &::after
+    width: 100%
+    bottom: 0
+    top: auto
+  &__menu, &__btn
+   display: none
+  &__logo
+   position: static
+   margin-left: 0
+  &.active
+   position: fixed
+   .container__large
+    .after, .header__logo
+     z-index: 11
+    .after
+     background: url('../img/main/close.svg') center no-repeat
+     width: 30px
+     height: 30px
+     top: 20px
+   .header
+
+    &__menu
+     display: block
+     position: fixed
+     top: 0
+     left: 0
+     width: 100vw
+     max-width: 100%
+     height: 100%
+     background-color: #000
+     z-index: 10
+     padding: 20px
+     padding-top: 100px
+ .preloader
+  svg
+   max-width: 90%
+@media (max-width: 575px)
+ .footer
+  &::before
+   display: none
+  &::after
+   width: calc(100% - 40px)
+   right: 20px
+  &__polit
+   width: 100%
+   display: block
+   text-align: center
+  &__wrap
+   grid-gap: 15px 0
+  &__main
+   flex-wrap: wrap
+   justify-content: space-between
+  &__copy
+   text-align: center
+   width: 100%
+  &__partners
+   width: 100%
+   margin-right: 0
+   img
+    max-width: 45%
+ .header
+  .container__large
+   padding: 27px 20px
+   &::after
+    width: calc(100% - 40px)
+    left: 20px
+   .after
+    right: 20px
+ .section__title
+  font-size: 30px
+  line-height: 115.5%
+  margin-bottom: 47px
