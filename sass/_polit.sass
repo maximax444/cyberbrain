@@ -1,0 +1,89 @@
+.polit
+    padding-top: 278px
+    padding-bottom: 100px
+    h1
+        font-family: 'JetBrains Mono'
+        font-weight: 700
+        font-size: 45px
+        line-height: 59px
+        color: #FFFFFF
+        margin: 0
+        margin-bottom: 50px
+    h2
+        font-weight: 700
+        font-size: 20px
+        line-height: 160%
+        margin: 0
+        margin-bottom: 30px
+        color: #FFFFFF
+    p
+        margin: 0
+        margin-bottom: 30px
+        font-weight: 300
+        font-size: 16px
+        line-height: 160%
+        color: #FFFFFF
+    ul
+        margin: 0
+        margin-bottom: 50px
+        padding: 0
+        padding-left: 70px
+        list-style-type: none
+        li
+            font-weight: 300
+            font-size: 16px
+            line-height: 160%
+            color: #FFFFFF
+            a
+                color: #FFFFFF
+    &__points
+        top: 250px
+        left: 44px
+        position: absolute
+        z-index: -1
+@media(max-width: 767px)
+    .polit
+        padding-top: 150px
+        ul
+            padding-left: 40px
+@media(max-width: 575px)
+    .polit
+        padding-top: 117px
+        padding-bottom: 40px
+        h1
+            font-size: 30px
+            line-height: 115.5%
+            margin-bottom: 44px
+        h2
+            font-size: 18px
+            line-height: 160%
+            margin-bottom: 29px
+            position: relative
+            cursor: pointer
+            padding-right: 15px
+            &::after
+                content: ""
+                display: block
+                width: 10px
+                height: 10px
+                background: url('../img/dop/polit-plus.svg') center no-repeat
+                background-size: cover
+                position: absolute
+                top: 11px
+                right: 0
+            &.active::after
+                background: url('../img/dop/polit-min.svg') center no-repeat
+        p
+            font-size: 16px
+            line-height: 160%
+            margin-bottom: 25px
+        ul
+            padding-left: 0
+            margin-bottom: 25px
+            li
+                font-size: 16px
+                line-height: 160%
+        &__drop
+            padding-top: 4px
+            padding-bottom: 22px
+            display: none

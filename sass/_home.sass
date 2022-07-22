@@ -85,6 +85,11 @@
         &:hover
             span
                 transform: skewX(20deg)
+.block
+    background-color: blue
+    height: 400px
+    width: 100%
+    border-radius: 50% 50% 0% 0% /70px 70px 50% 50%
 .home
     &-about
         position: relative
@@ -157,6 +162,8 @@
                     transform: scale(1.1)
     &-brands
         position: relative
+        .home-portfolio__arrows
+            display: none
         .after
             content: ""
             display: block
@@ -209,7 +216,6 @@
             justify-content: center
             align-items: flex-end
             transition: all 0.3s
-            animation: trapetionAnim2 3s infinite
             &::after
                 content: ''
                 z-index: -1
@@ -222,7 +228,6 @@
                 border-top: 21px solid #626161
                 border-left: 21px solid transparent
                 border-right: 21px solid transparent
-                animation: trapetionAnimIn2 3s infinite
         &__trap
             height: 0
             width: 80px
@@ -237,7 +242,6 @@
             justify-content: center
             align-items: flex-end
             transition: all 0.3s
-            animation: trapetionAnim 3s infinite
             &::after
                 content: ''
                 z-index: -1
@@ -249,7 +253,6 @@
                 border-bottom: 21px solid #626161
                 border-left: 21px solid transparent
                 border-right: 21px solid transparent
-                animation: trapetionAnimIn 3s infinite
     &-modules
         position: relative
         padding: 155px 0
@@ -267,6 +270,16 @@
         &__wrap
             display: grid
             grid-template-columns: repeat(3, 1fr)
+        &__more
+            font-weight: 600
+            font-size: 16px
+            line-height: 19px
+            text-align: center
+            text-transform: uppercase
+            color: #FEFF00
+            display: block
+            text-decoration: none
+            display: none
         &__block
             border: 1px solid #626161
             margin-bottom: -1px
@@ -477,11 +490,11 @@
                 &::before
                     border-right: 0px solid transparent
                     border-left: 30px solid transparent
-                    border-bottom: 58px solid #FEFF00
+                    border-bottom: 58px solid #51FD97
                 &::after
                     border-left: 0px solid transparent
                     border-right: 30px solid transparent
-                    border-top: 58px solid #FEFF00
+                    border-top: 58px solid #51FD97
         &__wrap
             height: 390px
             padding-left: 60px
@@ -590,6 +603,7 @@ a.home-modules__block:hover
                 height: 600px
                 padding: 40px 20px
                 background: url('../img/main/market-mob.svg') center no-repeat
+                background-size: cover
             &__title
                 padding: 0
                 font-size: 25px
@@ -636,21 +650,49 @@ a.home-modules__block:hover
                 display: block
             &__block
                 padding: 35px 30px
+                display: none
+                margin-bottom: 28px
             &__descr
                 font-size: 16px
             &__title
                 margin-bottom: 50px
                 font-size: 25px
                 line-height: 117.02%
+            &__more
+                display: block
         &-brands
+            padding-bottom: 100px
+            .home-portfolio__arrows
+                display: block
+            &__wrap
+                border: 0
+                padding: 0
+                width: 280px
+                margin: 0 auto
+                background: url('../img/main/brands-mob.svg') center no-repeat
+            &__el
+                height: 144px
             &__block
+                text-align: center
+                height: 144px
                 width: 100%
+                display: flex
+                align-items: center
+                justify-content: center
+                span
+                    display: none
+                img
+                    max-width: 100%
             &__title
                 width: 280px
                 margin-left: -140px
                 line-height: normal
+                border: 0
+                animation: none
                 &::after
-                    width: 241px
+                    display: none
+            &__trap
+                display: none
     .main
         padding-bottom: 140px
         &__title

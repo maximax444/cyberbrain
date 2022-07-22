@@ -48,7 +48,8 @@
  color: #FFFFFF
  margin-top: 0
  margin-bottom: 64px
-
+.after:not(.header .after)
+ pointer-events: none
 .footer
  padding-top: 49px
  padding-bottom: 69px
@@ -69,7 +70,6 @@
   position: absolute
   left: 57px
   top: -4px
-  animation: trippleRotate 3s infinite
   display: block
   background: url('../img/main/points.svg') center no-repeat
  &__wrap
@@ -119,7 +119,6 @@
    right: 57px
    top: 56px
    display: block
-   animation: trippleRotate 2s infinite
    background: url('../img/main/points.svg') center no-repeat
  &__wrap
   display: flex
@@ -186,23 +185,6 @@
     text-decoration: none
     &:hover
      color: #FEFF00
-   &.header__submenu:hover
-    & > a
-     padding-left: 23px
-     color: #FEFF00
-     &::before
-      width: 11px
-      height: 9px
-      position: absolute
-      top: 6px
-      left: 0
-      content: ""
-      display: block
-      background: url('../img/main/submenu.svg') center no-repeat
-    .header__drop
-     display: block
-     height: auto
-     padding: 20px 50px
  &__btn
   font-weight: 600
   font-size: 18px
@@ -240,15 +222,34 @@
    position: relative
    z-index: 2
   &:hover
-   color: #000
    &::before
     border-right: 0px solid transparent
     border-left: 30px solid transparent
-    border-bottom: 58px solid #FEFF00
+    border-bottom: 58px solid #49029E
    &::after
     border-left: 0px solid transparent
     border-right: 30px solid transparent
-    border-top: 58px solid #FEFF00
+    border-top: 58px solid #49029E
+@media (min-width: 768px)
+ .header__menu
+  &>li
+   &.header__submenu:hover
+    & > a
+     padding-left: 23px
+     color: #FEFF00
+     &::before
+      width: 11px
+      height: 9px
+      position: absolute
+      top: 6px
+      left: 0
+      content: ""
+      display: block
+      background: url('../img/main/submenu.svg') center no-repeat
+    .header__drop
+     display: block
+     height: auto
+     padding: 20px 50px
 @media(max-width: 1339px)
  .header__menu
   max-width: 400px
@@ -310,6 +311,12 @@
    grid-gap: 15px
  .header
   padding: 0
+  &__menu
+   ul
+    width: 280px
+    padding: 30px
+    display: none
+    height: auto
   .container__large
    padding: 27px 0
    .after

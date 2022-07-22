@@ -1,0 +1,173 @@
+.demo
+    padding-top: 280px
+    padding-bottom: 120px
+    &__title
+        max-width: 650px
+        margin: 0 auto
+        margin-bottom: 30px
+        text-align: center
+        font-family: 'JetBrains Mono'
+        font-weight: 700
+        font-size: 45px
+        line-height: 110%
+        color: #FFFFFF
+    &__subtitle
+        max-width: 520px
+        margin: 0 auto
+        margin-bottom: 50px
+        text-align: center
+        font-weight: 300
+        font-size: 20px
+        line-height: 160%
+        color: #FFFFFF
+    form
+        width: 323px
+        max-width: 100%
+        margin: 0 auto
+        margin-bottom: 40px
+        ::placeholder
+            color: inherit
+        input
+            width: 100%
+            height: 59px
+            padding-right: 20px
+            transition: all 0.3s
+            display: block
+            margin-bottom: 10px
+            border: 0
+            font-family: 'Inter'
+            border-bottom: 1px solid #FEFF00
+            font-weight: 300
+            font-size: 18px
+            line-height: 147.5%
+            letter-spacing: -0.02em
+            color: #FFFFFF
+            background-color: transparent
+            &:hover, &:focus
+                background-color: #FEFF00
+                color: #000
+                padding-left: 20px
+            &.err
+                border: 1px solid #FF0000
+                padding-right: 50%
+                padding-left: 18px
+        .input
+            &__block
+                position: relative
+                display: block
+            &__err
+                position: absolute
+                right: 20px
+                top: 1px
+                height: calc( 100% - 2px )
+                z-index: 2
+                display: none
+                align-items: center
+                font-weight: 300
+                font-size: 12px
+                line-height: 15px
+                text-align: right
+                padding-left: 10px
+                letter-spacing: -0.02em
+                color: #FF0000
+                img
+                    margin-right: 5px
+        button
+            margin-top: 40px
+            width: 100%
+            height: 73px
+            border: 5px solid #FEFF00
+            background-color: #000
+            font-family: 'Inter'
+            font-weight: 600
+            text-transform: uppercase
+            font-size: 18px
+            line-height: 22px
+            color: #FFFFFF
+            position: relative
+            &:hover
+                background-color: #FEFF00
+                color: #000
+            span:first-child
+                height: 0
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 48px
+                border-bottom: 8px solid #FEFF00
+                border-right: 10px solid transparent
+                border-left: 0px solid transparent
+                transition: all 0.3s
+                &::before
+                    content: ""
+                    display: block
+                    height: 0
+                    position: absolute
+                    bottom: -13px
+                    left: -13px
+                    width: 48px
+                    border-bottom: 8px solid #000
+                    border-right: 10px solid transparent
+                    border-left: 0px solid transparent
+                    transition: all 0.3s
+            span:nth-child(2)
+                height: 0
+                position: absolute
+                top: 0
+                right: 0
+                width: 48px
+                border-top: 8px solid #FEFF00
+                border-left: 10px solid transparent
+                border-right: 0px solid transparent
+                transition: all 0.3s
+                &::before
+                    content: ""
+                    display: block
+                    height: 0
+                    position: absolute
+                    top: -13px
+                    right: -13px
+                    width: 48px
+                    border-top: 8px solid #000
+                    border-left: 10px solid transparent
+                    border-right: 0px solid transparent
+                    transition: all 0.3s
+    &__small
+        max-width: 323px
+        margin: 0 auto
+        font-weight: 300
+        font-size: 12px
+        line-height: 15px
+        color: #FFFFFF
+        a
+            color: #FFFFFF
+@media(max-width: 767px)
+    .demo
+        padding-top: 150px
+@media(max-width: 575px)
+    .demo
+        padding-top: 116px
+        padding-bottom: 70px
+        &__title
+            font-size: 30px
+            line-height: 115.5%
+            margin-bottom: 26px
+        &__subtitle
+            font-size: 16px
+            line-height: 160%
+            margin-bottom: 24px
+        form
+            input
+                font-size: 16px
+                height: 60px
+            .input
+                &__err
+                    font-size: 10px
+                    line-height: 12px
+            button
+                height: 65px
+                font-size: 16px
+                line-height: 19px
+        &__small
+            font-size: 12px
+            line-height: 15px
