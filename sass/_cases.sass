@@ -1,0 +1,236 @@
+.fullpage
+    overflow: hidden
+.cases
+    padding-top: 278px
+    padding-bottom: 135px
+    position: relative
+    .after
+        position: absolute
+        z-index: -1
+        &1
+            top: 0
+            right: -160px
+            background: linear-gradient(0deg, rgba(161, 0, 207, 0.56), rgba(161, 0, 207, 0.56))
+            opacity: 0.5
+            filter: blur(150px)
+            width: 632px
+            height: 626px
+            z-index: 0
+        &2
+            top: 620px
+            left: -308px
+            background: linear-gradient(167.57deg, rgba(81, 253, 151, 0.35) 41.38%, rgba(161, 0, 207, 0.3) 86.98%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &3
+            top: 0
+            right: -283px
+            background: linear-gradient(169.74deg, rgba(81, 253, 151, 0.51) 9.78%, rgba(161, 0, 207, 0.4) 61.51%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &4
+            bottom: -60px
+            right: -318px
+            background: #FEFF00
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+    &__points
+        top: 250px
+        left: 44px
+        position: absolute
+        z-index: -1
+    &__title
+        font-family: 'JetBrains Mono'
+        font-style: normal
+        font-weight: 700
+        font-size: 45px
+        line-height: 50px
+        color: #FFFFFF
+        margin-bottom: 120px
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 87px 30px
+    &__more
+        display: flex
+        margin: 0 auto
+        margin-top: 132px
+        justify-content: center
+        align-items: center
+        width: 332px
+        height: 74px
+        font-weight: 600
+        font-size: 18px
+        line-height: 22px
+        text-decoration: none
+        text-transform: uppercase
+        color: #FEFF00
+        position: relative
+        img
+            margin-left: 15px
+        span
+            position: absolute
+            top: 0
+            left: 0
+            border: 4px solid #FEFF00
+            transform: skewX(20deg)
+            width: 100%
+            height: 100%
+            justify-content: center
+            align-items: center
+            display: flex
+            transition: all 0.3s
+            align-items: center
+        &:hover
+            span
+                transform: skewX(-20deg)
+    &__el
+        position: relative
+        background: #1B1A1E
+        &::after
+            content: ""
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: linear-gradient(0deg, #1B1A1E 72.18%, rgba(27, 26, 30, 0) 85.29%)
+
+    &__cont
+        padding: 26px 33px
+        padding-top: 90px
+        position: relative
+        z-index: 2
+    &__logo
+        margin-bottom: 29px
+    &__btn
+        width: 243px
+        height: 65px
+        border: 5px solid #FEFF00
+        background-color: #FEFF00
+        font-family: 'Inter'
+        font-weight: 600
+        text-transform: uppercase
+        font-size: 18px
+        line-height: 22px
+        color: #000
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        transition: all 0.3s
+        &:hover
+            background-color: darken(#FEFF00, 10)
+            color: #000
+        span:first-child
+            height: 0
+            position: absolute
+            bottom: 0
+            left: 0
+            width: 48px
+            border-bottom: 8px solid #FEFF00
+            border-right: 10px solid transparent
+            border-left: 0px solid transparent
+            transition: all 0.3s
+            &::before
+                content: ""
+                display: block
+                height: 0
+                position: absolute
+                bottom: -13px
+                left: -13px
+                width: 48px
+                border-bottom: 8px solid #000
+                border-right: 10px solid transparent
+                border-left: 0px solid transparent
+                transition: all 0.3s
+        span:nth-child(2)
+            height: 0
+            position: absolute
+            top: 0
+            right: 0
+            width: 48px
+            border-top: 8px solid #FEFF00
+            border-left: 10px solid transparent
+            border-right: 0px solid transparent
+            transition: all 0.3s
+            &::before
+                content: ""
+                display: block
+                height: 0
+                position: absolute
+                top: -13px
+                right: -13px
+                width: 48px
+                border-top: 8px solid #000
+                border-left: 10px solid transparent
+                border-right: 0px solid transparent
+                transition: all 0.3s
+    &__block
+        margin-bottom: 33px
+        font-weight: 300
+        font-size: 16px
+        line-height: 147.5%
+        letter-spacing: -0.02em
+        color: #FFFFFF
+        span
+            font-weight: 600
+            font-size: 40px
+            line-height: 117.02%
+            margin-bottom: 20px
+            display: block
+    &__img
+        height: 200px
+        width: 100%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__link
+        height: 65px
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        bottom: -30px
+        left: 0
+        width: 100%
+        z-index: 3
+        img
+            transition: all 0.3s
+        &:hover
+            img
+                transform: scale(1.1)
+    &__top
+        position: relative
+@media(max-width: 991px)
+    .cases
+        &__wrap
+            grid-template-columns: repeat(2,1fr)
+@media(max-width: 767px)
+    .cases
+        padding-top: 150px
+        &__wrap
+            grid-template-columns: repeat(1,1fr)
+@media(max-width: 575px)
+    .cases
+        padding-top: 120px
+        padding-bottom: 60px
+        &__title
+            margin-bottom: 40px
+        &__cont
+            padding: 15px
+            padding-top: 40px
+        &__wrap
+            grid-gap: 20px
+        &__more
+            width: 100%
+            margin-top: 40px

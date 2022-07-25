@@ -71,6 +71,7 @@ if (screen.width >= 1200) {
     let bg4 = $('.home-portfolio .after');
     let bg5 = $('.main .before');
     let bg6 = $('.polit__points');
+    let bg7 = $('.cases__points');
     window.addEventListener('mousemove', function (e) {
         let x = e.clientX / window.innerWidth;
         let y = e.clientY / window.innerHeight;
@@ -80,6 +81,7 @@ if (screen.width >= 1200) {
         bg4.css('transform', 'translate(-' + x * 100 + 'px, -' + y * 100 + 'px)');
         bg5.css('transform', 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)');
         bg6.css('transform', 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)');
+        bg7.css('transform', 'translate(-' + x * 30 + 'px, -' + y * 30 + 'px)');
 
     });
 }
