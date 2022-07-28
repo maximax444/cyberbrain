@@ -113,7 +113,7 @@
         margin-bottom: 29px
     &__btn
         width: 243px
-        height: 65px
+        height: 50px
         border: 5px solid #FEFF00
         background-color: #FEFF00
         font-family: 'Inter'
@@ -127,53 +127,34 @@
         align-items: center
         position: relative
         transition: all 0.3s
-        &:hover
-            background-color: darken(#FEFF00, 10)
-            color: #000
         span:first-child
             height: 0
             position: absolute
-            bottom: 0
-            left: 0
-            width: 48px
-            border-bottom: 8px solid #FEFF00
-            border-right: 10px solid transparent
-            border-left: 0px solid transparent
+            bottom: -12px
+            right: -5px
+            width: calc(100% - 38px)
+            border-top: 8px solid #FEFF00
+            border-right: 0px solid transparent
+            border-left: 10px solid transparent
             transition: all 0.3s
-            &::before
-                content: ""
-                display: block
-                height: 0
-                position: absolute
-                bottom: -13px
-                left: -13px
-                width: 48px
-                border-bottom: 8px solid #000
-                border-right: 10px solid transparent
-                border-left: 0px solid transparent
-                transition: all 0.3s
         span:nth-child(2)
             height: 0
             position: absolute
-            top: 0
-            right: 0
-            width: 48px
-            border-top: 8px solid #FEFF00
-            border-left: 10px solid transparent
-            border-right: 0px solid transparent
+            top: -12px
+            left: -5px
+            width: calc(100% - 38px)
+            border-bottom: 8px solid #FEFF00
+            border-left: 0px solid transparent
+            border-right: 10px solid transparent
             transition: all 0.3s
-            &::before
-                content: ""
-                display: block
-                height: 0
-                position: absolute
-                top: -13px
-                right: -13px
-                width: 48px
-                border-top: 8px solid #000
-                border-left: 10px solid transparent
-                border-right: 0px solid transparent
-                transition: all 0.3s
+        &:hover
+            background-color: darken(#FEFF00, 10)
+            border: 5px solid darken(#FEFF00, 10)
+            color: #000
+            span:first-child
+                border-top: 8px solid darken(#FEFF00, 10)
+            span:nth-child(2)
+                border-bottom: 8px solid darken(#FEFF00, 10)
     &__block
         margin-bottom: 33px
         font-weight: 300

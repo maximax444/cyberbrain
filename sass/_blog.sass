@@ -1,0 +1,452 @@
+.blog
+    padding-top: 278px
+    position: relative
+    .after
+        position: absolute
+        z-index: -1
+        &1
+            top: 0
+            right: -160px
+            background: linear-gradient(0deg, rgba(161, 0, 207, 0.56), rgba(161, 0, 207, 0.56))
+            opacity: 0.5
+            filter: blur(150px)
+            width: 632px
+            height: 626px
+            z-index: 0
+        &2
+            top: 620px
+            left: -308px
+            background: linear-gradient(167.57deg, rgba(81, 253, 151, 0.35) 41.38%, rgba(161, 0, 207, 0.3) 86.98%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &3
+            top: 0
+            right: -283px
+            background: linear-gradient(169.74deg, rgba(81, 253, 151, 0.51) 9.78%, rgba(161, 0, 207, 0.4) 61.51%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &4
+            top: 1280px
+            right: -318px
+            background: #FEFF00
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &5
+            bottom: -555px
+            left: -518px
+            background: #A100CF
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 779px
+            height: 627px
+    &__title
+        font-family: 'JetBrains Mono'
+        font-weight: 700
+        font-size: 45px
+        line-height: 50px
+        color: #FFFFFF
+        margin-bottom: 45px
+    &-main
+        display: flex
+        justify-content: space-between
+        text-decoration: none
+        color: #fff
+        margin-bottom: 79px
+        &__img
+            width: calc(100% - 480px)
+            height: 392px
+            overflow: hidden
+            img
+                width: 100%
+                height: 100%
+                transition: all 0.3s
+                object-fit: cover
+        &:hover
+            .blog-main__img img
+                transform: scale(1.1)
+        &__cont
+            width: 440px
+        &__cat
+            font-weight: 400
+            font-size: 12px
+            line-height: 15px
+            color: #D0D0D0
+            margin-bottom: 40px
+            span
+                font-weight: 600
+                font-size: 12px
+                line-height: 15px
+                text-transform: uppercase
+                color: #FEFF00
+                padding-right: 20px
+        &__name
+            font-weight: 600
+            font-size: 35px
+            line-height: 110%
+            color: #FEFF00
+            margin-bottom: 30px
+        &__descr
+            font-weight: 400
+            font-size: 16px
+            line-height: 150%
+            color: #D0D0D0
+            margin-bottom: 60px
+        &__owner
+            display: flex
+            align-items: center
+            &-img
+                margin-right: 15px
+            &-text
+                font-weight: 400
+                font-size: 12px
+                line-height: 15px
+                color: #D0D0D0
+                span
+                    font-weight: 600
+                    text-transform: uppercase
+                    display: block
+                    margin-bottom: 5px
+    &__wrap
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 80px 30px
+        border-top: 1px solid #FEFF00
+        padding-top: 80px
+    &__block
+        max-width: 363px
+        text-decoration: none
+        color: #fff
+        padding-bottom: 179px
+        position: relative
+        border-bottom: 1px solid #FEFF00
+        &:hover
+            .blog__img img
+                transform: scale(1.1)
+    &__img
+        width: calc(100%)
+        height: 186px
+        overflow: hidden
+        display: block
+        margin-bottom: 35px
+        img
+            width: 100%
+            height: 100%
+            transition: all 0.3s
+            object-fit: cover
+    &__cat
+        display: block
+        font-weight: 400
+        font-size: 12px
+        line-height: 15px
+        color: #D0D0D0
+        margin-bottom: 40px
+        span
+            font-weight: 600
+            font-size: 12px
+            line-height: 15px
+            text-transform: uppercase
+            color: #FEFF00
+            padding-right: 20px
+    &__name
+        font-weight: 600
+        font-size: 26px
+        line-height: 120%
+        color: #FEFF00
+        margin-bottom: 25px
+        display: block
+    &__descr
+        font-weight: 400
+        font-size: 16px
+        line-height: 150%
+        color: #D0D0D0
+        display: block
+    &__owner
+        display: flex
+        align-items: center
+        position: absolute
+        left: 0
+        bottom: 40px
+        width: 100%
+        &-img
+            margin-right: 15px
+        &-text
+            font-weight: 400
+            font-size: 12px
+            line-height: 15px
+            color: #D0D0D0
+            span
+                font-weight: 600
+                text-transform: uppercase
+                display: block
+                margin-bottom: 5px
+    &-sms
+        border-bottom: 1px solid #FEFF00
+        padding-bottom: 41px
+        &__all
+            padding: 80px 40px
+            background: #1E1E1E
+            height: 100%
+        &__wrap
+            background: url('../img/dop/blog-sms-bg.png') center no-repeat
+            background-size: cover
+            height: 100%
+            padding: 40px 35px
+        &__icon
+            text-align: center
+            margin-bottom: 30px
+        &__title
+            font-weight: 700
+            font-size: 26px
+            line-height: 130%
+            text-align: center
+            color: #FFFFFF
+            margin-bottom: 113px
+        &__btn
+            height: 65px
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 20px
+    &__more
+        display: flex
+        margin: 0 auto
+        margin-top: 132px
+        justify-content: center
+        align-items: center
+        width: 332px
+        height: 74px
+        font-weight: 600
+        font-size: 18px
+        line-height: 22px
+        text-decoration: none
+        text-transform: uppercase
+        color: #FEFF00
+        position: relative
+        img
+            margin-left: 15px
+        span
+            position: absolute
+            top: 0
+            left: 0
+            border: 4px solid #FEFF00
+            transform: skewX(20deg)
+            width: 100%
+            height: 100%
+            justify-content: center
+            align-items: center
+            display: flex
+            transition: all 0.3s
+            align-items: center
+        &:hover
+            span
+                transform: skewX(-20deg)
+    &-mail
+        padding-top: 124px
+        padding-bottom: 150px
+        &__wrap
+            height: 375px
+            background: url('../img/dop/blog-mail-bg.png') bottom center no-repeat
+            position: relative
+            display: flex
+            padding: 80px 60px
+            grid-gap: 40px
+            justify-content: space-between
+        &__before
+            position: absolute
+            left: -263px
+            top: -140px
+            z-index: -1
+            animation: blogMail 10s infinite linear
+        &__title
+            font-family: 'JetBrains Mono'
+            font-weight: 700
+            font-size: 35px
+            line-height: 110%
+            color: #FFFFFF
+            max-width: 550px
+        &__form
+            width: 370px
+            text-align: right
+            input
+                padding: 10px 0
+                font-weight: 600
+                font-size: 18px
+                line-height: 147.5%
+                letter-spacing: -0.02em
+                color: #D0D0D0
+                border: 0
+                display: block
+                width: 100%
+                margin-bottom: 20px
+                background-color: transparent
+                border-bottom: 1px solid #FEFF00
+        &__small
+            display: block
+            margin-bottom: 40px
+            font-weight: 300
+            font-size: 12px
+            line-height: 15px
+            color: #D0D0D0
+            text-align: left
+            a
+                color: #D0D0D0
+        &__btn
+            border: 0
+            background-color: transparent
+            &::before
+                border-bottom: 58px solid #FEFF00
+            &::after
+                border-top: 58px solid #FEFF00
+            &:hover
+                &::before
+                    border-bottom: 58px solid #FEFF00
+                &::after
+                    border-top: 58px solid #FEFF00
+@media(max-width: 1199px)
+    .blog
+        &__wrap
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+        &__block
+            max-width: 100%
+            width: 306px
+            padding-bottom: 120px
+        &-sms
+            width: 306px
+            &__all
+                padding: 60px 16px
+@media(max-width: 991px)
+    .blog
+        &-main
+            display: block
+            &__img
+                width: 100%
+                margin-bottom: 20px
+            &__cont
+                width: 100%
+        &__block, &-sms
+            width: 355px
+        &-mail
+            &__wrap
+                padding: 60px 40px
+            &__title
+                font-size: 32px
+                max-width: 325px
+@media(max-width: 767px)
+    .blog
+        padding-top: 120px
+        &__wrap
+            grid-gap: 40px 20px
+        &__block
+            width: 265px
+        &-sms
+            width: 265px
+            &__wrap
+                padding: 40px 15px
+            &__all
+                padding: 15px
+        &__name
+            font-size: 22px
+        &__descr
+            font-size: 13px
+        &__img, &__cat
+            margin-bottom: 20px
+        &-mail
+
+            &__wrap
+                display: block
+                height: auto
+                padding: 60px 40px
+            &__title
+                font-size: 26px
+                max-width: 100%
+                margin-bottom: 20px
+            &__form
+                width: 100%
+@media(max-width: 575px)
+    .blog
+        padding-top: 123px
+        .after
+            &1
+                width: 400px
+                height: 400px
+            &3
+                width: 400px
+                height: 400px
+            &2,&4
+                width: 500px
+                height: 500px
+        &__title
+            font-size: 30px
+            line-height: 115.5%
+            margin-top: 0
+            margin-bottom: 26px
+        &__wrap
+            grid-gap: 49px
+            padding-top: 50px
+        &__block
+            width: 100%
+            padding-bottom: 112px
+        &__img
+            height: auto
+            margin-bottom: 34px
+        &__cat
+            margin-bottom: 30px
+        &__name
+            font-size: 25px
+            line-height: 120%
+        &__descr
+            font-size: 16px
+            line-height: 150%
+        &-main
+            &__img
+                height: auto
+                margin-bottom: 34px
+            &__cat
+                margin-bottom: 30px
+            &__name
+                font-size: 25px
+                line-height: 120%
+            &__descr
+                font-size: 16px
+                line-height: 150%
+                margin-bottom: 33px
+        &-sms
+            width: 100%
+            &__all
+                padding: 0
+        &__more
+            margin-top: 58px
+            width: 100%
+        &-mail
+            padding-top: 64px
+            padding-bottom: 56px
+            &__before
+                width: 355px
+                height: 355px
+                right: -250px
+                top: -100px
+                img
+                    width: 100%
+            &__wrap
+                background: url('../img/dop/blog-mail-mob.png') bottom center no-repeat
+                background-size: cover
+                padding: 34px 24px
+                padding-bottom: 54px
+            &__title
+                font-size: 25px
+                line-height: 115.5%
+                margin-bottom: 22px
+            &__small
+                font-size: 12px
+                line-height: 15px
+                margin-bottom: 123px
