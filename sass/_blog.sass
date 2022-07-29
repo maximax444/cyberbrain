@@ -313,6 +313,71 @@
 .article
     padding-top: 278px
     padding-bottom: 40px
+    position: relative
+    .after
+        position: absolute
+        z-index: -1
+        &1
+            top: 0
+            right: -160px
+            background: linear-gradient(0deg, rgba(161, 0, 207, 0.56), rgba(161, 0, 207, 0.56))
+            opacity: 0.5
+            filter: blur(150px)
+            width: 632px
+            height: 626px
+            z-index: 0
+        &2
+            top: 620px
+            left: -308px
+            background: linear-gradient(167.57deg, rgba(81, 253, 151, 0.35) 41.38%, rgba(161, 0, 207, 0.3) 86.98%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &3
+            top: 0
+            right: -283px
+            background: linear-gradient(169.74deg, rgba(81, 253, 151, 0.51) 9.78%, rgba(161, 0, 207, 0.4) 61.51%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &4
+            top: 1280px
+            right: -318px
+            background: #FEFF00
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &5
+            bottom: -555px
+            left: -518px
+            background: #FEFF00
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 779px
+            height: 627px
+        &6
+            width: 547px
+            height: 969px
+            position: absolute
+            top: 2100px
+            left: -300px
+            background: linear-gradient(169.74deg, rgba(81, 253, 151, 0.51) 9.78%, rgba(161, 0, 207, 0.4) 61.51%)
+            filter: blur(175px)
+            transform: rotate(-180deg)
+        &7
+            width: 547px
+            height: 969px
+            position: absolute
+            top: 3100px
+            right: -300px
+            background: linear-gradient(169.74deg, rgba(81, 253, 151, 0.51) 9.78%, rgba(161, 0, 207, 0.4) 61.51%)
+            filter: blur(175px)
+            transform: rotate(-180deg)
     &__wrap
         display: flex
         justify-content: space-between
@@ -470,6 +535,8 @@
             padding-top: 60px
         &__owner
             padding-bottom: 60px
+        .after5
+            width: 550px
 @media(max-width: 767px)
     .blog
         padding-top: 120px
@@ -585,6 +652,16 @@
                 margin-bottom: 123px
     .article
         padding-top: 117px
+        .after
+            &1
+                width: 400px
+                height: 400px
+            &3
+                width: 400px
+                height: 400px
+            &2,&4, &6,&7
+                width: 500px
+                height: 500px
         &__img
             margin-bottom: 32px
         &__owner

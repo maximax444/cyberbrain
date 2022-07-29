@@ -192,6 +192,71 @@
                 transform: scale(1.1)
     &__top
         position: relative
+.case
+    &__logo
+        margin-bottom: 30px
+    &__descr
+        margin-bottom: 74px
+        margin-top: 0
+        max-width: 520px
+        font-weight: 300
+        font-size: 20px
+        line-height: 160%
+    &__text
+        h2
+            margin-bottom: 30px
+        q
+            padding-left: 5px
+            padding-right: 5px
+            margin-bottom: 80px
+            & + p
+                margin-top: -50px
+    &-cases
+        .home-brands__title
+            top: 119px
+        .home-brands__trap
+            bottom: 150px
+        &__wrap
+            padding-top: 119px
+            padding-bottom: 150px
+            border-top: 1px solid #FEFF00
+    &-q
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-top: 30px
+        &__autor
+            display: flex
+            justify-content: center
+            align-items: center
+        &__img
+            border: 5px solid #FEFF00
+            width: 100px
+            height: 100px
+            margin-right: 25px
+            clip-path: polygon(0% 0, 100% 0, 100% 30%, 100% 70%, 100% 100%, 50% 100%, 25% 100%, 0% 75%)
+            position: relative
+            &::before
+                width: 5px
+                height: 35px
+                background-color: #FEFF00
+                display: block
+                content: ""
+                position: absolute
+                top: 70%
+                left: 5%
+                transform: rotate(-45deg)
+        &__name
+            font-weight: 300
+            font-size: 14px
+            line-height: 17px
+            span
+                display: block
+                margin-bottom: 5px
+                font-weight: 600
+                font-size: 16px
+                line-height: 19px
+                text-transform: uppercase
 @media(max-width: 991px)
     .cases
         &__wrap
@@ -215,3 +280,42 @@
         &__more
             width: 100%
             margin-top: 40px
+    .case
+        &__logo
+            width: 145px
+            img
+                max-width: 100%
+        &__descr
+            font-size: 16px
+            line-height: 160%
+            margin-bottom: 45px
+        &__text
+            q
+                font-size: 25px
+                line-height: 140%
+                padding-left: 0
+                padding-right: 0
+                padding-top: 30px
+        &-q
+            &__img
+                width: 70px
+                height: 70px
+                margin-right: 20px
+                &::before
+                    top: 63%
+            &__name
+                max-width: calc(100% - 90px)
+                font-size: 14px
+                line-height: 17px
+                span
+                    font-size: 14px
+                    line-height: 17px
+        &-cases
+            &__wrap
+                padding-top: 80px
+                padding-bottom: 0
+            .home-brands__title
+                top: 80px
+                width: 244px
+                text-align: center
+                margin-left: -122px
