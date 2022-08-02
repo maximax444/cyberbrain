@@ -1,0 +1,179 @@
+.overlay
+ position: fixed
+ overflow-y: scroll
+ top: 0
+ left: 0
+ width: 100vw
+ height: 100vh
+ background: rgba(73, 2, 158, 0.4) url('../img/main/modal-bg.png') top center no-repeat
+ backdrop-filter: blur(10px)
+ background-size: 100%
+ z-index: 10
+ display: none
+ &-active
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 40px 0
+ &-brand
+  align-items: flex-start
+  .popup-wrap
+   max-width: 100%
+.popup
+ &-close
+  margin-top: 12px
+  transition: all 0.3s
+  width: 23px
+  height: 23px
+  display: flex
+  justify-content: center
+  align-items: center
+  img
+   max-width: 100%
+  &:hover
+   cursor: pointer
+   transform: rotate(90deg)
+ &-call
+  background: #000000
+  width: 440px
+  padding: 55px
+  &__top
+   display: flex
+   justify-content: space-between
+   align-items: flex-start
+   margin-bottom: 24px
+  &__title
+   font-family: 'JetBrains Mono'
+   font-weight: 700
+   font-size: 35px
+   line-height: 110%
+   color: #FFFFFF
+  form
+   width: 100%
+   max-width: 100%
+   margin: 0 auto
+   margin-bottom: 40px
+   ::placeholder
+    color: inherit
+   input
+    width: 100%
+    height: 59px
+    padding-right: 20px
+    transition: all 0.3s
+    display: block
+    margin-bottom: 10px
+    border: 0
+    font-family: 'Inter'
+    border-bottom: 1px solid #FEFF00
+    font-weight: 300
+    font-size: 18px
+    line-height: 147.5%
+    letter-spacing: -0.02em
+    color: #FFFFFF
+    background-color: transparent
+    &:hover, &:focus
+     background-color: #FEFF00
+     color: #000
+     padding-left: 20px
+    &.errr
+     border: 1px solid #FF0000
+     padding-right: 50%
+     padding-left: 18px
+   .input
+    &__block
+     position: relative
+     display: block
+    &__err
+     position: absolute
+     right: 20px
+     top: 1px
+     height: calc( 100% - 2px )
+     z-index: 2
+     display: none
+     align-items: center
+     font-weight: 300
+     font-size: 12px
+     line-height: 15px
+     text-align: right
+     padding-left: 10px
+     letter-spacing: -0.02em
+     color: #FF0000
+     img
+      margin-right: 5px
+   button
+    margin-top: 40px
+    width: 100%
+    height: 73px
+    border: 5px solid #FEFF00
+    background-color: #000
+    font-family: 'Inter'
+    font-weight: 600
+    text-transform: uppercase
+    font-size: 18px
+    line-height: 22px
+    color: #FFFFFF
+    position: relative
+    &:hover
+     background-color: #FEFF00
+     color: #000
+    span:first-child
+     height: 0
+     position: absolute
+     bottom: 0
+     left: 0
+     width: 48px
+     border-bottom: 8px solid #FEFF00
+     border-right: 10px solid transparent
+     border-left: 0px solid transparent
+     transition: all 0.3s
+     &::before
+      content: ""
+      display: block
+      height: 0
+      position: absolute
+      bottom: -13px
+      left: -13px
+      width: 48px
+      border-bottom: 8px solid #000
+      border-right: 10px solid transparent
+      border-left: 0px solid transparent
+      transition: all 0.3s
+    span:nth-child(2)
+     height: 0
+     position: absolute
+     top: 0
+     right: 0
+     width: 48px
+     border-top: 8px solid #FEFF00
+     border-left: 10px solid transparent
+     border-right: 0px solid transparent
+     transition: all 0.3s
+     &::before
+      content: ""
+      display: block
+      height: 0
+      position: absolute
+      top: -13px
+      right: -13px
+      width: 48px
+      border-top: 8px solid #000
+      border-left: 10px solid transparent
+      border-right: 0px solid transparent
+      transition: all 0.3s
+@media(max-width: 768px)
+ .overlay
+  &-call
+   align-items: flex-start
+@media(max-width: 575px)
+ .overlay-call
+  padding: 0
+  overflow: hidden
+ .popup
+  &-call
+   max-width: 100vw
+   width: 100vw
+   height: 100vh
+   padding: 40px 15px
+   overflow-y: scroll
+   &__title
+    max-width: 250px

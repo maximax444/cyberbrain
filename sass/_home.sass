@@ -613,6 +613,7 @@ a.home-modules__block:hover
                 font-size: 16px
                 line-height: 19px
                 width: 100%
+                text-align: center
         &-portfolio
             padding-top: 60px
             &__block
@@ -630,8 +631,17 @@ a.home-modules__block:hover
             &__el
                 display: block
             &__video
+                display: block
+                width: 100%
+                &::before
+                    width: 100%
+                    height: 40%
+                    margin-left: 0
+                    background: linear-gradient(185.86deg, #1B1A1E 53.96%, rgba(27,26,30,0) 74.58%)
                 &::after
-                    top: 50px
+                    top: 60px
+                    left: 50%
+                    margin-left: -21px
         &-about
             &__wrap
                 display: block

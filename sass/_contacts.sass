@@ -1,5 +1,85 @@
 .contacts
+    padding-top: 278px
+    padding-bottom: 65px
+    position: relative
+    .after
+        position: absolute
+        z-index: -1
+        &1
+            top: 0
+            right: -160px
+            background: linear-gradient(0deg, rgba(161, 0, 207, 0.56), rgba(161, 0, 207, 0.56))
+            opacity: 0.5
+            filter: blur(150px)
+            width: 632px
+            height: 626px
+            z-index: 0
+        &2
+            top: 620px
+            left: -308px
+            background: linear-gradient(167.57deg, rgba(81, 253, 151, 0.35) 41.38%, rgba(161, 0, 207, 0.3) 86.98%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &3
+            top: 0
+            right: -283px
+            background: linear-gradient(169.74deg, rgba(81, 253, 151, 0.51) 9.78%, rgba(161, 0, 207, 0.4) 61.51%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &4
+            top: 1280px
+            right: -318px
+            background: #FEFF00
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+        &5
+            bottom: -555px
+            left: -518px
+            background: #A100CF
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 779px
+            height: 627px
+    &__wrap
+        position: relative
+    &__title
+        font-family: 'JetBrains Mono'
+        font-style: normal
+        font-weight: 700
+        font-size: 45px
+        line-height: 50px
+        margin-bottom: 45px
+        margin-top: 0
+        color: #FFFFFF
+    &__block
+        margin-bottom: 50px
+    &__subtitle
+        font-weight: 600
+        font-size: 16px
+        line-height: 19px
+        margin-bottom: 15px
+        color: #3F3F3F
+    &__mail
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        text-decoration: none
+        color: #fff
+        &:hover
+            text-decoration: underline
+            color: #51FD97
     &__soc
+        display: flex
+        align-items: center
+        grid-gap: 20px
         a
             path
                 transition: all 0.3s
@@ -9,3 +89,107 @@
                         fill: #000
                     &-bg
                         fill: #FEFF00
+    &-demo
+        padding-bottom: 150px
+        &__title
+            font-family: 'JetBrains Mono'
+            font-style: normal
+            font-weight: 700
+            font-size: 45px
+            line-height: 50px
+            margin-bottom: 60px
+            margin-top: 0
+            color: #FFFFFF
+        &__wrap
+            display: flex
+            justify-content: space-between
+        &__left
+            background: linear-gradient(90deg, #411698 0%, rgba(65, 22, 152, 0) 100%)
+            width: 50%
+            padding: 54px
+            clip-path: polygon(0% 0, 100% 0, 100% 30%, 100% 70%, 100% 100%, 50% 100%, 100% 100%, 0% 50%)
+        &__btn
+            text-decoration: none
+            width: 273px
+        &__img
+            width: 50%
+            height: 285px
+            display: flex
+            align-items: flex-end
+            justify-content: center
+            background: url('../img/dop/contacts-demo-bg.png') center no-repeat
+            background-size: cover
+#map
+    width: 542px
+    height: 359px
+    position: absolute
+    top: 0
+    right: 0
+    clip-path: polygon(0% 0, 100% 0, 100% 30%, 100% 70%, 100% 86%, 91% 100%, 0% 100%, 0% 50%)
+@media(max-width: 1199px)
+    #map
+        width: 500px
+@media(max-width: 991px)
+    #map
+        position: static
+        margin-bottom: 50px
+        width: 100%
+    .contacts
+        &-demo
+            &__wrap
+                display: block
+            &__btn
+                margin: 0 auto
+            &__left
+                width: 100%
+                height: 400px
+                clip-path: none
+                background: linear-gradient(180deg, #411698 -20.03%, rgba(65, 22, 152, 0) 108.82%)
+            &__img
+                width: 100%
+                margin-top: -200px
+                background: transparent
+@media(max-width: 767px)
+    .contacts
+        padding-top: 150px
+@media(max-width: 575px)
+    .contacts
+        padding-top: 116px
+        padding-bottom: 60px
+        .after
+            &1
+                width: 400px
+                height: 400px
+            &3
+                width: 400px
+                height: 400px
+            &2
+                width: 500px
+                height: 500px
+        &__title
+            font-size: 30px
+            line-height: 115.5%
+            margin-bottom: 32px
+        &__block
+            margin-bottom: 37px
+        &__subtitle
+            font-size: 16px
+            line-height: 19px
+        &-demo
+            padding-bottom: 55px
+            &__wrap
+            &__title
+                margin-bottom: 44px
+                font-size: 30px
+                line-height: 35px
+            &__left
+                padding: 48px 18px
+                height: 300px
+            &__btn
+                width: 100%
+                height: 56px
+            &__img
+                img
+                    width: 120%
+    #map
+        height: 185px
