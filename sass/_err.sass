@@ -2,24 +2,40 @@
     padding-top: 338px
     padding-bottom: 226px
     position: relative
+    .after
+        &1
+            width: 632px
+            height: 626px
+            background: linear-gradient(0deg, rgba(161, 0, 207, 0.56), rgba(161, 0, 207, 0.56))
+            opacity: 0.5
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            position: absolute
+            top: -20px
+            right: -160px
+        &2
+            position: absolute
+            top: -20px
+            right: -283px
+            background: linear-gradient(169.74deg, rgba(81, 253, 151, 0.51) 9.78%, rgba(161, 0, 207, 0.4) 61.51%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 640px
+            height: 969px
     &__img
         position: absolute
-        bottom: 100px
+        bottom: 00px
         right: 0
         overflow: hidden
-        &::after
-            content: ""
-            display: block
-            width: 150%
-            height: 100%
-            mask: url('../img/dop/patt.png')
-            z-index: 2
-            position: absolute
-            top: 0
-            left: -150%
-            mix-blend-mode: color-burn
-            animation: err 5s infinite linear
-
+        &2
+            clip-path: url(#mask0_74_21962)
+            width: 754px
+            height: 517px
+            img
+                animation: err 5s infinite linear
+        clipPath
+                width: 100%
+                height: auto
     &__title
         margin-top: 0
         margin-bottom: 10px
@@ -42,31 +58,27 @@
         margin-top: 0
     mask
         path
-            transform: translateX(10px)
     g
         path
-            transform: translateX(10px)
+            display: none
+            // animation: err 5s infinite linear
 @media(max-width: 1379px)
     .err
         &__img
             width: 600px
-            img
-                max-width: 100%
-            &::after
-                width: 175%
+
 @media(max-width: 1199px)
     .err
         padding-bottom: 350px
+        &__descr
+            position: relative
+            z-index: 2
 @media(max-width: 991px)
     .err
         padding-bottom: 540px
         &__img
-            bottom: 0
+            bottom: -50px
             width: auto
-            img
-                max-width: 100%
-            &::after
-                width: 150%
         &__descr
             margin-bottom: 40px
 @media(max-width: 767px)
@@ -99,5 +111,20 @@
             font-size: 16px
             line-height: 19px
             margin-bottom: 55px
-        &__img::after
-            width: 220%
+        &__img
+            height: auto
+            width: 100%
+            margin-right: -20px
+            overflow: visible
+            bottom: 0
+            display: flex
+            justify-content: flex-end
+            &2
+                clip-path: url(#mask0_216_511)
+                width: 381px
+                height: 195px
+                transform: translateX(60px)
+@media(max-width: 349px)
+    .err
+        &__img2
+            transform: translateX(90px)

@@ -1,6 +1,17 @@
 .blog
     padding-top: 278px
     position: relative
+    &::after
+        content: ""
+        display: block
+        width: 716px
+        height: 266px
+        top: 5px
+        left: 50%
+        margin-left: -228px
+        background: url('../img/dop/blog-points.svg') center no-repeat
+        position: absolute
+        z-index: -1
     .after
         position: absolute
         z-index: -1
@@ -177,6 +188,19 @@
         width: 100%
         &-img
             margin-right: 15px
+            &.photo
+                width: 47px
+                height: 47px
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: #FEFF00
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 12px 100%, 0 calc(100% - 12px))
+                img
+                    width: calc(100% - 4px)
+                    height: calc(100% - 4px)
+                    object-fit: cover
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 11px 100%, 0 calc(100% - 11px))
         &-text
             font-weight: 400
             font-size: 12px
@@ -264,7 +288,6 @@
             left: -263px
             top: -140px
             z-index: -1
-            animation: blogMail 10s infinite linear
         &__title
             font-family: 'JetBrains Mono'
             font-weight: 700
@@ -275,6 +298,8 @@
         &__form
             width: 370px
             text-align: right
+            ::placeholder
+                color: inherit
             input
                 padding: 10px 0
                 font-weight: 600
@@ -288,6 +313,36 @@
                 margin-bottom: 20px
                 background-color: transparent
                 border-bottom: 1px solid #FEFF00
+                transition: all 0.3s
+                &:hover, &:focus
+                    background-color: #FEFF00
+                    color: #000
+                    padding-left: 20px
+                &.errr
+                    border: 1px solid #FF0000
+                    padding-right: 50%
+                    padding-left: 18px
+            .input
+                &__block
+                    position: relative
+                    display: block
+                &__err
+                    position: absolute
+                    right: 20px
+                    top: 1px
+                    height: calc( 100% - 2px )
+                    z-index: 2
+                    display: none
+                    align-items: center
+                    font-weight: 300
+                    font-size: 12px
+                    line-height: 15px
+                    text-align: right
+                    padding-left: 10px
+                    letter-spacing: -0.02em
+                    color: #FF0000
+                    img
+                        margin-right: 5px
         &__small
             display: block
             margin-bottom: 40px
@@ -298,6 +353,8 @@
             text-align: left
             a
                 color: #D0D0D0
+                &:hover
+                    color: #FEFF00
         &__btn
             border: 0
             background-color: transparent
@@ -379,25 +436,25 @@
             filter: blur(175px)
             transform: rotate(-180deg)
     &__wrap
-        display: flex
-        justify-content: space-between
-        align-items: flex-start
-        position: relative
-        flex-direction: row-reverse
+
     &__owner
         width: 363px
         position: static
+        margin-bottom: 60px
     &__img
         width: 100%
         margin-bottom: 80px
         img
             width: 100%
     &-soc
-        position: absolute
-        bottom: 80px
-        right: 0
-        width: 363px
-        padding-left: 57px
+        span
+            display: block
+            height: calc(100% - 100px)
+        &__all
+            position: sticky
+            bottom: 80px
+            left: 0
+
         &__title
             font-weight: 600
             font-size: 16px
@@ -415,8 +472,6 @@
                     path:not(.black)
                         fill: #FEFF00
     &__text
-        width: calc(100% - 363px)
-        padding-right: 30px
         h1
             margin-top: 0
             font-family: 'JetBrains Mono'
@@ -462,7 +517,8 @@
             &::after
                 content: "”"
         img
-            width: 100%
+            display: block
+            margin: 0 auto
             margin-bottom: 80px
         ul
             margin-top: -20px
@@ -533,6 +589,7 @@
             position: static
             padding-left: 0
             padding-top: 60px
+            height: auto
         &__owner
             padding-bottom: 60px
         .after5

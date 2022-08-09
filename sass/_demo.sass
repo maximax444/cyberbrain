@@ -111,57 +111,57 @@
                 img
                     margin-right: 5px
         button
-            margin-top: 40px
-            width: 100%
-            height: 73px
-            border: 5px solid #FEFF00
-            background-color: #000
-            font-family: 'Inter'
+            margin-top: 39px
             font-weight: 600
-            text-transform: uppercase
+            width: 100%
+            border: 0
             font-size: 18px
             line-height: 22px
-            color: #FFFFFF
-            position: relative
-            font-size: 16px
-            line-height: 19px
+            text-transform: uppercase
+            color: #000
             background-color: transparent
-            clip-path: polygon(0% 15%, 0 0, 15% 0%, 79% 0, 83% 7%, 100% 7%, 100% 85%, 100% 100%, 85% 100%, 20% 100%, 15% 91%, 0 91%)
-            &:hover
-                background-color: #FEFF00
-                color: #000
-            span:first-child
+            text-decoration: none
+            padding: 22px 0px
+            text-align: center
+            position: relative
+            &::before
+                content: ""
+                width: calc(100% - 50px)
                 height: 0
-                position: absolute
-                bottom: 0
-                left: 0
-                width: 48px
-                border-bottom: 8px solid #FEFF00
-                border-right: 10px solid transparent
-                border-left: 0px solid transparent
-                transition: all 0.3s
-                border: 0
-                width: 95px
-                height: 30px
-                bottom: -24px
-                background-color: #FEFF00
-                clip-path: polygon(0 0, 45% 0, 71% 31%, 71% 52%, 45% 18%, 0 18%)
-            span:nth-child(2)
-                height: 0
+                display: block
                 position: absolute
                 top: 0
-                right: 0
-                width: 48px
-                border-top: 8px solid #FEFF00
-                border-left: 10px solid transparent
-                border-right: 0px solid transparent
+                left: 0
+                border-bottom: 58px solid #FEFF00
+                border-right: 30px solid transparent
+                border-left: 0px solid transparent
                 transition: all 0.3s
-                border: 0
-                width: 122px
-                height: 40px
-                top: -8px
-                background-color: #FEFF00
-                clip-path: polygon(45% 0, 57% 15%, 100% 15%, 100% 31%, 57% 31%, 45% 16%)
+            &::after
+                content: ""
+                width: calc(100% - 50px)
+                height: 0
+                display: block
+                position: absolute
+                bottom: 0
+                right: 0
+                border-top: 58px solid #FEFF00
+                border-right: 0px solid transparent
+                border-left: 30px solid transparent
+                transition: all 0.3s
+            span
+                position: relative
+                z-index: 2
+            &:hover
+                &::before
+                    left: 20px
+                    border-right: 0px solid transparent
+                    border-left: 30px solid transparent
+                    border-bottom: 58px solid #FEFF00
+                &::after
+                    right: 20px
+                    border-left: 0px solid transparent
+                    border-right: 30px solid transparent
+                    border-top: 58px solid #FEFF00
     &__small
         max-width: 323px
         margin: 0 auto
@@ -212,32 +212,6 @@
                 &__err
                     font-size: 10px
                     line-height: 12px
-            button
-                height: 65px
-                font-size: 16px
-                line-height: 19px
-                background-color: transparent
-                clip-path: polygon(0% 15%, 0 0, 15% 0%, 79% 0, 83% 8%, 100% 8%, 100% 85%, 100% 100%, 85% 100%, 20% 100%, 15% 90%, 0 90%)
-                span
-                    &:first-child
-                        border: 0
-                        width: 95px
-                        height: 30px
-                        bottom: -24px
-                        background-color: #FEFF00
-                        clip-path: polygon(0 0, 45% 0, 71% 31%, 71% 52%, 45% 18%, 0 18%)
-                        &::before
-                            display: none
-                    &:nth-child(2)
-                        border: 0
-                        width: 122px
-                        height: 40px
-                        top: -8px
-                        background-color: #FEFF00
-                        clip-path: polygon(0 0, 45% 0, 71% 31%, 71% 52%, 45% 18%, 0 18%)
-                        clip-path: polygon(45% 0, 57% 18%, 100% 18%, 100% 31%, 57% 31%, 45% 16%)
-                        &::before
-                            display: none
         &__small
             font-size: 12px
             line-height: 15px
@@ -249,32 +223,3 @@
                 right: 0
                 img
                     width: 100%
-@media(max-width: 350px)
-    .demo
-        form
-            button
-                height: 65px
-                font-size: 16px
-                line-height: 19px
-                background-color: transparent
-                clip-path: polygon(0% 15%, 0 0, 15% 0%, 75% 0, 81% 9%, 100% 9%, 100% 85%, 100% 100%, 85% 100%, 22% 100%, 16% 90%, 0 90%)
-                span
-                    &:first-child
-                        border: 0
-                        width: 95px
-                        height: 30px
-                        bottom: -24px
-                        background-color: #FEFF00
-                        clip-path: polygon(0 0, 45% 0, 71% 31%, 71% 52%, 45% 18%, 0 18%)
-                        &::before
-                            display: none
-                    &:nth-child(2)
-                        border: 0
-                        width: 122px
-                        height: 40px
-                        top: -8px
-                        background-color: #FEFF00
-                        clip-path: polygon(0 0, 45% 0, 71% 31%, 71% 52%, 45% 18%, 0 18%)
-                        clip-path: polygon(45% 0, 57% 18%, 100% 18%, 100% 31%, 57% 31%, 45% 16%)
-                        &::before
-                            display: none

@@ -25,7 +25,6 @@
         display: block
         background: url('../img/main/main-bottom.svg') center no-repeat
         background-size: contain
-        animation: arrow 2s infinite ease
     .before
         content: ""
         width: 202px
@@ -67,11 +66,14 @@
         text-transform: uppercase
         color: #FEFF00
         position: relative
-        img
+        svg
             margin-left: 15px
+            path
+                transition: all 0.3s
         span
             position: absolute
             top: 0
+            z-index: -1
             left: 0
             border: 4px solid #FEFF00
             transform: skewX(-20deg)
@@ -83,7 +85,11 @@
             transition: all 0.3s
             align-items: center
         &:hover
+            color: #000
+            path
+                fill: #000
             span
+                background-color: #FEFF00
                 transform: skewX(20deg)
 .block
     background-color: blue
@@ -256,6 +262,17 @@
     &-modules
         position: relative
         padding: 155px 0
+        &::after
+            content: ""
+            display: block
+            width: 1320px
+            height: 492px
+            top: 75px
+            left: 50%
+            margin-left: -728px
+            background: url('../img/main/modules-points.svg') center no-repeat
+            position: absolute
+            z-index: -1
         .after
             content: ""
             width: 637px
@@ -299,7 +316,7 @@
                 left: 80%
                 bottom: 80%
                 z-index: 2
-                transition: all 0.5s
+                transition: all 0.15s
                 background: url('../img/main/home-modules-arrow.svg') bottom left no-repeat
             &::after
                 content: ""
@@ -526,6 +543,9 @@ a.home-modules__block:hover
         overflow: hidden
         video
             margin-right: -200px
+    .home-brands__el
+        img
+            max-width: 230px
 @media (max-width: 991px)
     .home
         &-brands
@@ -573,8 +593,10 @@ a.home-modules__block:hover
         padding-bottom: 200px
         padding-top: 400px
         .video
-            height: 500px
+            width: 100%
+            height: auto
             video
+                width: 100%
                 margin-right: 0
     .home
         &-brands
@@ -603,6 +625,7 @@ a.home-modules__block:hover
                 height: 600px
                 padding: 40px 20px
                 background: url('../img/main/market-mob.svg') center no-repeat
+                clip-path: polygon(calc(100% - 40px) 0, 100% 40px, 100% 100%, 0 100%, 0 0)
                 background-size: cover
             &__title
                 padding: 0
@@ -616,8 +639,10 @@ a.home-modules__block:hover
                 text-align: center
         &-portfolio
             padding-top: 60px
+            padding-bottom: 135px
             &__block
                 display: block
+                clip-path: polygon(100% 0, 100% 100%, 40px 100%, 0 calc(100% - 40px), 0 0)
             &__cont
                 width: 100%
                 padding: 40px 30px
@@ -625,9 +650,13 @@ a.home-modules__block:hover
                     display: none
             &__arrows
                 width: 80px
+                height: 55px
                 right: 50%
                 margin-right: -40px
-                bottom: -80px
+                bottom: -85px
+            &__arrow
+                img
+                    width: 100%
             &__el
                 display: block
             &__video
@@ -692,7 +721,7 @@ a.home-modules__block:hover
                 span
                     display: none
                 img
-                    max-width: 100%
+                    max-width: 95%
             &__title
                 width: 280px
                 margin-left: -140px
@@ -717,12 +746,8 @@ a.home-modules__block:hover
         .after
             display: none
         &__btn
-            width: 240px
+            width: calc(100% - 40px)
             font-size: 16px
             line-height: 19px
-            img
+            svg
                 display: none
-        .video
-            height: 425px
-            video
-                margin-right: -90px

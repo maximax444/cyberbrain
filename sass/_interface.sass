@@ -9,7 +9,6 @@
    padding: 0
    width: 1150px
    margin: auto
-   position: relative
 @media (max-width: 1199px)
  .container
   width: 980px
@@ -113,12 +112,17 @@
  left: 0
  width: 100%
  z-index: 3
+ transition: all 0.3s
+ .container__large
+  position: static
+  top: -100px
  &.scrolled
   z-index: 5
   .container__large
    padding: 0 57px
    background: #000000
    position: fixed
+   transition: all 0.6s
    top: 0
    left: 0
    width: 100vw
@@ -126,33 +130,76 @@
     display: none
   .header
    &__wrap
-    height: 73px
+    height: 66px
     align-items: center
     justify-content: flex-start
    &__logo
     position: static
     margin: 0
     margin-right: 74px
-   &__menu
-    a
-     padding-bottom: 0
-   &__btn
-    height: 66px
-    text-align: center
-    position: absolute
-    top: 0
-    right: 0
-    color: #000000
-    width: 320px
-    background: #FEFF00
-    transform: skew(20deg)
-    &:hover
-     background: darken(#FEFF00, 10)
-    span
+    display: none
+    &-mob
      display: block
-     transform: skew(-20deg)
-    &::before, &::after
-     display: none
+     margin-right: 74px
+     path
+      transition: all 0.3s
+     &:hover
+      path
+       fill: #FEFF00
+   &__menu
+    &>li
+     position: relative
+     &>a
+      padding: 22px 0
+      position: relative
+     &::before
+      content: ""
+      width: 100%
+      transition: all 0.3s
+      height: 0
+      background: #FEFF00
+      transform: skew(20deg)
+      position: absolute
+      top: 100%
+      left: 0
+      z-index: 5
+     &:hover, &.current
+      &::before
+       height: 8px
+     &.current a
+      color: #FEFF00
+    &>li.header__submenu>a::before
+     top: 28px
+    &>li.header__submenu:hover>a::before
+     top: 28px
+   &__btn
+    opacity: 0
+    &2
+     opacity: 1
+     display: block
+     height: 66px
+     text-align: center
+     position: absolute
+     top: 0
+     right: 0
+     color: #000000
+     width: 320px
+     span
+      display: block
+     &::before
+      opacity: 0
+     &::after
+      width: 100%
+      height: 100%
+      background: #FEFF00
+      border: 0
+      transform: skew(20deg)
+      transition: transform 0.3s
+     &:hover
+      &::after
+       transform: skew(-20deg)
+       background-color: #fff
+       border: 0
  .container__large
   &::after
    content: ""
@@ -184,6 +231,8 @@
   top: 0
   left: 50%
   margin-left: -80px
+  &-mob
+   display: none
  &__menu
   margin: 0
   padding: 0
@@ -246,6 +295,8 @@
   text-decoration: none
   padding: 22px 27px
   position: relative
+  &2
+   display: none
   &::before
    content: ""
    width: calc(100% - 30px)
@@ -257,7 +308,7 @@
    border-bottom: 58px solid #49029E
    border-right: 30px solid transparent
    border-left: 0px solid transparent
-   transition: all 0.3s
+   transition: border-bottom 0.3s, border-top 0.3s, border-right 0.3s, border-left 0.3s
   &::after
    content: ""
    width: calc(100% - 30px)
@@ -269,19 +320,20 @@
    border-top: 58px solid #49029E
    border-right: 0px solid transparent
    border-left: 30px solid transparent
-   transition: all 0.3s
+   transition: border-top 0.3s, border-bottom 0.3s, border-right 0.3s, border-left 0.3s
   span
    position: relative
    z-index: 2
   &:hover
+   color: #000
    &::before
     border-right: 0px solid transparent
     border-left: 30px solid transparent
-    border-bottom: 58px solid #49029E
+    border-bottom: 58px solid #FEFF00
    &::after
     border-left: 0px solid transparent
     border-right: 30px solid transparent
-    border-top: 58px solid #49029E
+    border-top: 58px solid #FEFF00
 @media(min-width: 768px)
  .header
   .header__menu > li > a
@@ -290,43 +342,54 @@
 @media (min-width: 768px)
  .header__menu
   &>li
-   &.header__submenu:hover
-    & > a
-     padding-left: 23px
-     color: #FEFF00
+   &.header__submenu
+    & >a
      &::before
-      width: 11px
+      content: ""
+      display: block
+      width: 0
+      transition: all 0.3s
       height: 9px
       position: absolute
       top: 6px
       left: 0
-      content: ""
+      background: url('../img/main/submenu.svg') center right no-repeat
+    &:hover
+     & > a
+      padding-left: 23px
+      color: #FEFF00
+      &::before
+       width: 11px
+     .header__drop
       display: block
-      background: url('../img/main/submenu.svg') center no-repeat
-    .header__drop
-     display: block
-     height: auto
-     padding: 20px 50px
+      height: auto
+      padding: 20px 50px
 @media(max-width: 1339px)
  .header__menu
-  max-width: 400px
+  max-width: 500px
   flex-wrap: wrap
   grid-gap: 15px 35px
   &>li>a
    padding-bottom: 10px
  .header.scrolled
   .header__menu
-   grid-gap: 5px 25px
-@media(max-width: 1099px)
+   grid-gap: 0px 15px
+@media(max-width: 1129px)
  .header.scrolled
+  .container__large
+   padding: 0 20px
   .header__logo
    margin-right: 45px
   .header__menu
-   max-width: 300px
-   grid-gap: 5px 25px
+   max-width: 400px
+   grid-gap: 0px 15px
+   &>li>a
+    font-size: 16px
 @media(max-width: 1259px)
  .header
   .container__large
+   position: relative
+   top: 0
    &::after
     left: 0px
     top: -60px
@@ -342,8 +405,8 @@
    font-size: 14px
 @media (max-width: 991px)
  .header__menu
-  max-width: 260px
-  grid-gap: 10px 15px
+  max-width: 300px
+  grid-gap: 15px 25px
  .footer
   &__polit
    padding-left: 15px
@@ -356,21 +419,25 @@
   .header
    &__logo
     margin-right: 20px
+   &__wrap
+    height: 56px
    &__menu
-    max-width: 200px
+    max-width: 300px
     grid-gap: 5px 10px
     a
      font-size: 13px
-  .header__btn
-   width: 250px
-   font-size: 20px
+    &>li>a
+     font-size: 12px
+  .header__btn:not(.header__btn3)
+   width: 220px
    height: 56px
    padding: 0
    display: flex
-   align-items: center
    justify-content: center
+   align-items: center
    span
     position: static
+    font-size: 16px
 @media (max-width: 767px)
  .footer
   &__wrap
@@ -400,6 +467,8 @@
     padding: 30px
     display: none
     height: auto
+  &.scrolled .header__wrap
+   height: 74px
   .container__large
    padding: 27px 0
    .after
@@ -414,8 +483,9 @@
   &__menu, &__btn
    display: none
   &__logo
-   position: static
-   margin-left: 0
+   display: none
+   &-mob
+    display: block
   &.active
    position: fixed
    .container__large
@@ -452,8 +522,10 @@
      width: 100%
      margin-bottom: 22px
   &.scrolled
-   .header__btn
+   .header__btn, .header__btn2:not(.header__btn3)
     display: none
+   .header__btn3
+    opacity: 1
    .container__large
     border-bottom: 1px solid #FEFF00
     padding-bottom: 0
@@ -461,6 +533,19 @@
      display: block
      right: 20px
    .header__menu
+    &>li
+     &.header__submenu:hover > a::before
+      top: 17px
+     &>a
+      font-size: 18px
+      line-height: 43px
+      padding: 0
+      &.active
+       padding-left: 30px
+       position: relative
+     &:hover, &.active
+      &::before
+       display: none
     .header__btn
      display: flex
      justify-content: center
@@ -481,6 +566,14 @@
       transform: none
      &::before, &::after
       display: block
+     &::after
+      height: 0
+      background-color: transparent
+      transform: none
+      border-top: 58px solid #49029E
+      border-right: 0px solid transparent
+      border-left: 30px solid transparent
+      width: calc(100% - 30px)
     &>li>a
      font-size: 18px
      line-height: 43px
