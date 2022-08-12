@@ -4,9 +4,15 @@ $(document).ready(function () {
         mobile: false,
     }).init();
     if ($(window).width() >= 768) {
-        printTitle();
+
         $('video source').each(function () {
             $(this).attr('src', $(this).attr('data-desk'));
+
+        });
+        $('video').load();
+    } else {
+        $('video source').each(function () {
+            $(this).attr('src', $(this).attr('data-mob'));
 
         });
         $('video').load();
@@ -17,6 +23,7 @@ $(document).ready(function () {
 });
 function printTitle() {
     let title = $('.main__title');
+    $('.main__title').css('height', title.height());
     let titletext = title.text().trim();
     title.html('');
     let i = 0;
@@ -223,3 +230,27 @@ $(".demo form, .overlay form, .blog-mail form").submit(function (r) {
 //         }
 //     }
 // });
+
+
+$(document).on({
+    mouseenter: function () {
+        $(this).addClass('active');
+        let num = $(this).index();
+        if (num == 2) {
+            num = 1;
+        } else if (num == 1) {
+            num = 2;
+        }
+        $('.predict-steps__descr').eq(num).addClass('active');
+    },
+    mouseleave: function () {
+        $(this).removeClass('active');
+        let num = $(this).index();
+        if (num == 2) {
+            num = 1;
+        } else if (num == 1) {
+            num = 2;
+        }
+        $('.predict-steps__descr').eq(num).removeClass('active');
+    }
+}, '.predict-steps__block');

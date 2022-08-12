@@ -1,1 +1,415 @@
 .predict
+    height: auto
+    &__title
+        max-width: 745px
+        span
+            display: block
+            color: #FEFF00
+    &__descr
+        max-width: 560px
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 42px
+    &__block
+        width: 344px
+        height: 206px
+        padding: 37px
+        &:nth-child(1)
+            background: url('../img/predict/predict3-bg.png') center no-repeat
+            background-size: contain
+        &:nth-child(2)
+            background: url('../img/predict/predict2-bg.png') center no-repeat
+            background-size: contain
+        &:nth-child(3)
+            background: url('../img/predict/predict1-bg.png') center no-repeat
+            background-size: contain
+    &__icon
+        width: 30px
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-bottom: 19px
+    &__text
+        margin: 0
+        font-weight: 300
+        font-size: 18px
+        line-height: 146.5%
+        letter-spacing: -0.02em
+    &-steps
+        padding-top: 142px
+        padding-bottom: 165px
+        position: relative
+        .before
+            position: absolute
+            display: block
+            top: -400px
+            left: -310px
+            background: linear-gradient(167.57deg, rgba(73, 2, 158, 0.54) 41.38%, rgba(161, 0, 207, 0.3) 86.98%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+            z-index: -1
+        .after
+            position: absolute
+            display: block
+            top: 278px
+            right: -318px
+            background: #FEFF00
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+            z-index: -1
+        &__title
+            margin: 0
+            font-family: 'JetBrains Mono'
+            font-weight: 700
+            font-size: 45px
+            line-height: 50px
+            margin-bottom: 73px
+        &__wrap
+            display: flex
+            justify-content: space-between
+        &__block
+            width: 208px
+            height: 208px
+            padding: 15px
+            border-top: 1px solid #626161
+            position: relative
+            transition: all 0.3s
+            path
+                transition: all 0.3s
+            &:hover
+                background-color: #FEFF00
+                path
+                    fill: #000
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                width: 1px
+                height: 100%
+                background: linear-gradient(top, rgba(#626161,1), rgba(#626161,0))
+            &::after
+                content: ""
+                display: block
+                position: absolute
+                top: 0
+                right: 0
+                width: 1px
+                height: 100%
+                background: linear-gradient(top, rgba(#626161,1), rgba(#626161,0))
+            &:nth-child(2n+1)
+                margin-top: 97px
+            &:nth-child(1)
+                .lines
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    &::after
+                        content: ""
+                        display: block
+                        height: 0
+                        width: 52px
+                        border-top: 1px dashed #626161
+                        position: absolute
+                        top: -1px
+                        left: 100%
+            &:nth-child(2)
+                .lines
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    &::before
+                        content: ""
+                        display: block
+                        height: 0
+                        width: 110px
+                        border-top: 1px dashed #626161
+                        position: absolute
+                        top: 45px
+                        left: -80px
+                        transform: rotate(-60deg)
+                    &::after
+                        content: ""
+                        display: block
+                        height: 0
+                        width: 52px
+                        border-top: 1px dashed #626161
+                        position: absolute
+                        top: -1px
+                        left: 100%
+            &:nth-child(3)
+                .lines
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    &::before
+                        content: ""
+                        display: block
+                        height: 0
+                        width: 110px
+                        border-top: 1px dashed #626161
+                        position: absolute
+                        top: -50px
+                        left: -82px
+                        transform: rotate(60deg)
+                    &::after
+                        content: ""
+                        display: block
+                        height: 0
+                        width: 52px
+                        border-top: 1px dashed #626161
+                        position: absolute
+                        top: -1px
+                        left: 100%
+            &:nth-child(4)
+                .lines
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    &::before
+                        content: ""
+                        display: block
+                        height: 0
+                        width: 110px
+                        border-top: 1px dashed #626161
+                        position: absolute
+                        top: 45px
+                        left: -80px
+                        transform: rotate(-60deg)
+        &__num
+            position: absolute
+            bottom: 0px
+            left: 0
+        &__descrs
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            grid-gap: 59px 0
+            padding-top: 85px
+        &__descr
+            width: 520px
+            display: flex
+            transition: all 0.3s
+            &-num
+                width: 72px
+                margin-right: 24px
+                font-weight: 600
+                font-size: 40.3846px
+                line-height: 117.02%
+                color: transparent
+                -webkit-text-stroke: 1px #626161
+                -webkit-text-fill-color: #000
+                transition: all 0.3s
+            &-text
+                width: calc(100% - 96px)
+                font-weight: 300
+                font-size: 18px
+                line-height: 146.5%
+                letter-spacing: -0.02em
+            &.active
+                color: #FEFF00
+                .predict-steps__descr-num
+                    -webkit-text-stroke: 1px #FEFF00
+    &-rev
+        position: relative
+        .after
+            position: absolute
+            display: block
+            top: 100px
+            left: -300px
+            background: linear-gradient(169.74deg, rgba(161, 0, 207, 0.4) 9.78%, rgba(81, 253, 151, 0.51) 59.21%)
+            filter: blur(175px)
+            transform: rotate(-180deg)
+            width: 547px
+            height: 969px
+            z-index: -1
+        &__wrap
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &__cont
+            width: calc(100% - 640px)
+        &__img
+            width: 600px
+            height: 390px
+            background-color: #FEFF00
+            display: flex
+            justify-content: center
+            align-items: center
+            clip-path: polygon(0% 15%, 0 0, 15% 0%, calc(100% - 41px) 0, calc(100% - 30px) 8px, 100% 8px, 100% 85%, 100% 100%, 85% 100%, 41px 100%, 30px calc(100% - 8px), 0 calc(100% - 8px))
+            span
+                background-color: #fff
+                display: block
+                width: calc(100% - 8px)
+                height: calc(100% - 8px)
+                clip-path: polygon(0% 15%, 0 0, 15% 0%, calc(100% - 41px) 0, calc(100% - 30px) 8px, 100% 8px, 100% 85%, 100% 100%, 85% 100%, 41px 100%, 30px calc(100% - 8px), 0 calc(100% - 8px))
+                display: flex
+                justify-content: center
+                align-items: center
+                img
+                    max-width: 100%
+                    max-height: 100%
+        &__title
+            margin-top: 0
+            margin-bottom: 34px
+            font-family: 'JetBrains Mono'
+            font-weight: 700
+            font-size: 45px
+            line-height: 50px
+        &__text
+            font-weight: 300
+            font-size: 18px
+            line-height: 178.5%
+            letter-spacing: -0.02em
+            max-width: 480px
+    &-adap
+        padding-top: 162px
+        position: relative
+        .before
+            position: absolute
+            display: block
+            top: 1100px
+            left: -300px
+            background: linear-gradient(169.74deg, rgba(81, 253, 151, 0.51) 39.28%, rgba(254, 255, 0, 0.54) 83.34%)
+            filter: blur(175px)
+            transform: rotate(-180deg)
+            width: 547px
+            height: 1255px
+            z-index: -1
+        .after
+            position: absolute
+            display: block
+            top: 506px
+            right: -318px
+            background: #A100CF
+            opacity: 0.4
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 779px
+            height: 921px
+            z-index: -1
+        &__title
+            font-family: 'JetBrains Mono'
+            max-width: 750px
+            font-weight: 700
+            font-size: 45px
+            line-height: 50px
+            margin-top: 0
+            margin-bottom: 90px
+        &__wrap
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__left
+            width: 430px
+            font-family: 'JetBrains Mono'
+            font-weight: 300
+            font-size: 40px
+            line-height: 99.5%
+            position: relative
+            &::before
+                content: ""
+                display: block
+                width: 527px
+                height: 520px
+                position: absolute
+                top: -100px
+                left: -145px
+                background: url('../img/predict/adap-left.svg') center no-repeat
+        &__cont
+            width: 606px
+        &__block
+            display: flex
+            margin-bottom: 72px
+        &__icon
+            width: 29px
+            height: 29px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-right: 27px
+        &__text
+            width: calc(100% - 56px)
+        &__bot
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 506px
+            height: 115px
+            background: url('../img/predict/adap-dop-bg.png') center no-repeat
+            span
+                width: calc(100% - 175px)
+                font-weight: 600
+                font-size: 18px
+                line-height: 138%
+                letter-spacing: -0.02em
+                color: #FEFF00
+                margin-left: 23px
+    &-marketing
+        &__wrap
+            background: url(../img/predict/mark.png) center no-repeat
+    &-else
+        padding-bottom: 140px
+        &__title
+            font-family: 'JetBrains Mono'
+            font-style: normal
+            font-weight: 700
+            font-size: 45px
+            line-height: 50px
+            margin-top: 0
+            margin-bottom: 73px
+            max-width: 250px
+        &__wrap
+            display: flex
+            justify-content: center
+        &__name
+            font-weight: 600
+            font-size: 30px
+            line-height: 117.02%
+            color: #FEFF00
+            transition: all 0.3s
+        &__link
+            display: block
+            margin-top: 60px
+        &__block
+            width: 20%
+            height: 230px
+            border: 1px solid #626162
+            padding: 39px
+            margin-right: -1px
+            text-decoration: none
+            transition: all 0.3s
+            color: #000
+            &::before
+                content: ""
+                width: 0px
+                height: 0px
+                display: block
+                position: absolute
+                top: 22px
+                right: 22px
+                z-index: 2
+                transition: all 0.15s
+                background: url('../img/main/home-modules-arrow.svg') bottom left no-repeat
+            &:hover
+                background-color: #FEFF00
+                transform: translateY(-20px)
+                &::before
+                    width: 22px
+                    height: 22px
+                .predict-else
+                    &__name
+                        color: #000
