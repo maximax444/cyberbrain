@@ -254,3 +254,13 @@ $(document).on({
         $('.predict-steps__descr').eq(num).removeClass('active');
     }
 }, '.predict-steps__block');
+if ($(window).width() <= 575) {
+    $('.predict-steps__wrap').slick({
+        slide: ".predict-steps__block",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: ".predict-steps__prev",
+        nextArrow: ".predict-steps__next"
+    });
+}
