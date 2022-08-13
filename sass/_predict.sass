@@ -92,6 +92,8 @@
                 background-color: #FEFF00
                 path
                     fill: #000
+                    &.stroke
+                        stroke: #000
             &::before
                 content: ""
                 display: block
@@ -338,6 +340,10 @@
         &__block
             display: flex
             margin-bottom: 72px
+        &__text
+            font-weight: 300
+            font-size: 18px
+            line-height: 133%
         &__icon
             width: 29px
             height: 29px

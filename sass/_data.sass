@@ -1,0 +1,144 @@
+.data
+    &__descr
+        max-width: 660px
+        font-size: 18px
+    &-adap
+        padding-top: 124px
+        &__wrap
+            align-items: flex-start
+        &__left
+            width: 485px
+            margin-top: 154px
+        &__block
+            margin-bottom: 40px
+    &-how
+        padding-top: 122px
+        position: relative
+        &__bot
+            display: none
+        .before
+            position: absolute
+            display: block
+            top: -400px
+            left: -310px
+            background: linear-gradient(167.57deg, rgba(73, 2, 158, 0.54) 41.38%, rgba(161, 0, 207, 0.3) 86.98%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+            z-index: -1
+        .after
+            position: absolute
+            display: block
+            top: 278px
+            right: -318px
+            background: #FEFF00
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+            z-index: -1
+        &__title
+            margin: 0
+            margin-bottom: 90px
+            font-family: 'JetBrains Mono'
+            font-weight: 700
+            font-size: 45px
+            line-height: 50px
+        &__img
+            width: 1152px
+            position: relative
+            &>img
+                width: 100%
+        &__wrap
+            width: 325px
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            position: absolute
+            left: 30px
+            &:nth-child(1)
+                top: 64px
+            &:nth-child(2)
+                top: 254px
+            &:nth-child(3)
+                top: 444px
+        &__block
+            width: 105px
+            height: 50px
+            border-top: 1px solid #626161
+            margin-bottom: 5px
+            position: relative
+            display: flex
+            justify-content: center
+            align-items: center
+            span
+                width: 100%
+                height: 100%
+                position: absolute
+                top: 0
+                left: 0
+                background: #FEFF00
+                display: flex
+                justify-content: center
+                align-items: center
+                font-family: 'JetBrains Mono'
+                font-weight: 400
+                font-size: 14px
+                line-height: 18px
+                text-align: center
+                color: #000000
+                opacity: 0
+                transition: all 0.3s
+            &:hover
+                span
+                    opacity: 1
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                width: 1px
+                height: 100%
+                background: linear-gradient(top, rgba(#626161,1), rgba(#626161,0))
+            &::after
+                content: ""
+                display: block
+                position: absolute
+                top: 0
+                right: 0
+                width: 1px
+                height: 100%
+                background: linear-gradient(top, rgba(#626161,1), rgba(#626161,0))
+@media(max-width: 1199px)
+    .data
+        &-how
+            &__all
+                overflow-x: scroll
+@media(max-width: 767px)
+    .data
+        &-how
+            &__bot
+                display: flex
+                justify-content: center
+                align-items: center
+                grid-gap: 23px
+                padding-top: 54px
+@media(max-width: 575px)
+    .data
+        &-adap
+            padding-top: 0
+            &__left
+                width: 100%
+                margin-top: 102px
+        &-how
+            padding-top: 70px
+            &__title
+                font-size: 30px
+                line-height: 115.5%
+                margin-bottom: 62px
+            &__all
+                margin: 0 -20px
+                padding: 0 20px
