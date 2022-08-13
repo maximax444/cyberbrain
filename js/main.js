@@ -263,6 +263,15 @@ if ($(window).width() <= 575) {
         prevArrow: ".predict-steps__prev",
         nextArrow: ".predict-steps__next"
     });
+    $('.cyber-stat__wrap').slick({
+        slide: ".cyber-stat__block",
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        adaptiveHeight: true,
+        prevArrow: ".cyber-stat__prev",
+        nextArrow: ".cyber-stat__next"
+    });
 }
 $('.data-how__right').on('click', function () {
     $('.data-how__all').animate({ scrollLeft: document.querySelector('.data-how__all').scrollLeft + 250 }, 500);

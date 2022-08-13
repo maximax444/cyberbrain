@@ -117,6 +117,49 @@
         padding-top: 0
     &__descr
         max-width: 655px
+.cyber
+    &__descr
+        max-width: 670px
+    &-stat
+        padding-top: 144px
+        &__title
+            margin: 0
+            margin-bottom: 90px
+            font-family: 'JetBrains Mono'
+            font-weight: 700
+            font-size: 45px
+            line-height: 110%
+        &__wrap
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            grid-gap: 60px 0
+        &__block
+            display: flex
+            align-items: flex-start
+            width: calc(50% - 42px)
+        &__num
+            width: 63px
+            margin-right: 33px
+            color: transparent
+            font-weight: 600
+            font-size: 40px
+            line-height: 49px
+            -webkit-text-stroke: 1px #626161
+        &__text
+            width: calc(100% - 96px)
+            font-weight: 300
+            font-size: 16px
+            line-height: 150%
+            span
+                display: block
+                margin-bottom: 20px
+                font-weight: 600
+                font-size: 20px
+                line-height: 110%
+                color: #FEFF00
+        .home-portfolio__arrows
+            display: none
 @media(max-width: 1199px)
     .data
         &-how
@@ -131,6 +174,9 @@
                 align-items: center
                 grid-gap: 23px
                 padding-top: 54px
+    .cyber-stat
+        &__block
+            width: 100%
 @media(max-width: 575px)
     .data
         &-adap
@@ -147,3 +193,23 @@
             &__all
                 margin: 0 -20px
                 padding: 0 20px
+    .cyber
+        &-stat
+            padding-top: 70px
+            padding-bottom: 50px
+            &__title
+                font-size: 30px
+                line-height: 115.5%
+                margin-bottom: 50px
+            &__wrap
+                display: block
+                position: relative
+            &__block
+                display: block
+            &__num
+                margin-bottom: 20px
+            &__text
+                width: 100%
+            .home-portfolio__arrows
+                display: block
+                z-index: 5
