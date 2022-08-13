@@ -160,11 +160,95 @@
                 color: #FEFF00
         .home-portfolio__arrows
             display: none
+.sh
+    &-adap
+        padding-bottom: 110px
+        &__left
+            margin-top: 0
+        &__block
+            margin-bottom: 60px
+    &-scroll
+        padding-bottom: 16px
+        padding-top: 122px
+        position: relative
+        .before
+            position: absolute
+            display: block
+            top: -400px
+            left: -310px
+            background: linear-gradient(167.57deg, rgba(73, 2, 158, 0.54) 41.38%, rgba(161, 0, 207, 0.3) 86.98%)
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+            z-index: -1
+        .after
+            position: absolute
+            display: block
+            top: 278px
+            right: -318px
+            background: #FEFF00
+            opacity: 0.3
+            filter: blur(150px)
+            transform: rotate(-180deg)
+            width: 637px
+            height: 969px
+            z-index: -1
+        &__title
+            margin: 0
+            margin-bottom: 90px
+            font-family: 'JetBrains Mono'
+            font-weight: 700
+            font-size: 45px
+            max-width: 965px
+            line-height: 50px
+        &__wrap
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__all
+            width: 645px
+        &__bot
+            display: none
+        &__text
+            width: 425px
+            max-width: calc(100% - 680px)
+            font-weight: 300
+            font-size: 18px
+            line-height: 178.5%
+            letter-spacing: -0.02em
+            color: #FFFFFF
+            span
+                font-family: 'JetBrains Mono'
+                font-weight: 400
+                font-style: italic
+                position: relative
+                display: inline-block
+                margin: 0 20px
+                &::before
+                    content: ""
+                    display: block
+                    width: calc(100% + 20px)
+                    height: calc(100% - 4px)
+                    background: #A100CF
+                    position: absolute
+                    top: 2px
+                    z-index: -1
+                    transform: skew(-40deg)
+                    left: -7px
 @media(max-width: 1199px)
     .data
         &-how
             &__all
                 overflow-x: scroll
+@media(max-width: 991px)
+    .sh
+        &-scroll
+            &__wrap
+                display: block
+            &__text
+                max-width: 100%
+                margin-bottom: 60px
 @media(max-width: 767px)
     .data
         &-how
@@ -177,6 +261,17 @@
     .cyber-stat
         &__block
             width: 100%
+    .sh
+        &-scroll
+            &__all
+                width: 100%
+                overflow-x: scroll
+            &__bot
+                display: flex
+                justify-content: center
+                align-items: center
+                grid-gap: 23px
+                padding-top: 30px
 @media(max-width: 575px)
     .data
         &-adap
@@ -213,3 +308,21 @@
             .home-portfolio__arrows
                 display: block
                 z-index: 5
+    .sh
+        &-adap
+            padding-bottom: 40px
+        &-scroll
+            padding-top: 62px
+            padding-bottom: 34px
+            &__title
+                margin-bottom: 38px
+                font-size: 30px
+                line-height: 115.5%
+            &__all
+                margin: 0 -20px
+                padding: 0 20px
+                width: 100vw
+            &__text
+                font-size: 16px
+                line-height: 160%
+                margin-bottom: 29px

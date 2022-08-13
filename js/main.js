@@ -279,3 +279,9 @@ $('.data-how__right').on('click', function () {
 $('.data-how__left').on('click', function () {
     $('.data-how__all').animate({ scrollLeft: document.querySelector('.data-how__all').scrollLeft - 250 }, 500);
 });
+$('.sh-scroll__right').on('click', function () {
+    $(this).closest('section').find('.sh-scroll__all').animate({ scrollLeft: "+=" + 200 }, 500);
+});
+$('.sh-scroll__left').on('click', function () {
+    $(this).closest('section').find('.sh-scroll__all').animate({ scrollLeft: "-=" + 200 }, 500);
+});
