@@ -186,6 +186,8 @@
             display: flex
             justify-content: space-between
             border: 1px solid #626161
+            border-top: 0
+            border-bottom: 0
             padding: 65px 40px
             align-items: center
         &__block
@@ -212,7 +214,7 @@
             color: #51FD97
             height: 0
             width: 600px
-            border-top: 20px solid #000
+            border-top: 20px solid transparent
             border-left: 20px solid transparent
             border-right: 20px solid transparent
             position: absolute
@@ -223,43 +225,120 @@
             justify-content: center
             align-items: flex-end
             transition: all 0.3s
+            b 
+                font-weight: 300
+                &::after
+                    content: ''
+                    z-index: -1
+                    position: absolute
+                    bottom: 20px
+                    left: calc(100% + 29px)
+                    height: 1px
+                    width: 266px
+                    background-color: #616262
+                &::before
+                    content: ''
+                    z-index: -1
+                    position: absolute
+                    bottom: 20px
+                    right: calc(100% + 29px)
+                    height: 1px
+                    width: 266px
+                    background-color: #616262
+            &::after
+                content: ''
+                z-index: -1
+                position: absolute
+                bottom: -1px
+                right: -21px
+                height: 25px
+                width: 1px
+                background-color: #616262
+                transform: rotate(45deg)
+            &::before
+                content: ''
+                z-index: -1
+                position: absolute
+                bottom: -1px
+                left: -21px
+                height: 25px
+                width: 1px
+                background-color: #616262
+                transform: rotate(-45deg)
+            span
+                &::after
+                    content: ''
+                    z-index: -1
+                    position: absolute
+                    bottom: 2px
+                    right: -12px
+                    width: calc(100% + 24px)
+                    height: 1px
+                    background-color: #616262
+        &__trap
+            height: 0
+            width: 80px
+            border-bottom: 20px solid transparent
+            border-left: 20px solid transparent
+            border-right: 20px solid transparent
+            position: absolute
+            left: 50%
+            margin-left: -40px
+            bottom: -22px
+            display: flex
+            justify-content: center
+            align-items: flex-end
+            transition: all 0.3s
+            b 
+                font-weight: 300
+                &::after
+                    content: ''
+                    z-index: -1
+                    position: absolute
+                    bottom: 2px
+                    left: calc(100% + 29px)
+                    height: 1px
+                    width: 526px
+                    background-color: #616262
+                &::before
+                    content: ''
+                    z-index: -1
+                    position: absolute
+                    bottom: 2px
+                    right: calc(100% + 29px)
+                    height: 1px
+                    width: 526px
+                    background-color: #616262
             &::after
                 content: ''
                 z-index: -1
                 position: absolute
                 bottom: -1px
                 left: -21px
-                transition: all 0.3s
-                height: 0
-                width: 561px
-                border-top: 21px solid #626161
-                border-left: 21px solid transparent
-                border-right: 21px solid transparent
-        &__trap
-            height: 0
-            width: 80px
-            border-bottom: 20px solid #000
-            border-left: 20px solid transparent
-            border-right: 20px solid transparent
-            position: absolute
-            left: 50%
-            margin-left: -40px
-            bottom: 0px
-            display: flex
-            justify-content: center
-            align-items: flex-end
-            transition: all 0.3s
-            &::after
+                height: 25px
+                width: 1px
+                background-color: #616262
+                transform: rotate(45deg)
+            &::before
                 content: ''
                 z-index: -1
                 position: absolute
-                top: -1px
-                left: -21px
-                height: 0
-                width: 40px
-                border-bottom: 21px solid #626161
-                border-left: 21px solid transparent
-                border-right: 21px solid transparent
+                bottom: -1px
+                right: -21px
+                height: 25px
+                width: 1px
+                background-color: #616262
+                transform: rotate(-45deg)
+            span
+                &::after
+                    content: ''
+                    z-index: -1
+                    position: absolute
+                    bottom: 20px
+                    right: -12px
+                    width: calc(100% + 24px)
+                    height: 1px
+                    background-color: #616262
     &-modules
         position: relative
         padding: 155px 0
@@ -547,7 +626,25 @@ a.home-modules__block:hover
     .home-brands__el
         img
             max-width: 230px
+    .home-brands
+        &__title
+            b
+                &::after, &::before
+                    width: 180px
+        &__trap
+            b
+                &::after, &::before
+                    width: 440px
 @media (max-width: 991px)
+    .home-brands
+        &__title
+            b
+                &::after, &::before
+                    width: 61px
+        &__trap
+            b
+                &::after, &::before
+                    width: 320px
     .home
         &-brands
             &__wrap
@@ -605,8 +702,14 @@ a.home-modules__block:hover
                 width: 400px
                 margin-left: -200px
                 font-size: 18px
-                &::after
-                    width: 361px
+            &__title
+                b
+                    &::after, &::before
+                        width: 66px
+            &__trap
+                b
+                    &::after, &::before
+                        width: 225px
         &-about__title
             padding: 15px
         &-marketing
@@ -730,8 +833,11 @@ a.home-modules__block:hover
                 line-height: normal
                 border: 0
                 animation: none
-                &::after
+                &::after, &::before
                     display: none
+                span, b
+                    &::after, &::before
+                        display: none
             &__trap
                 display: none
     .main
