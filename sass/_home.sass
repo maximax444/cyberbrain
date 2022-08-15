@@ -317,7 +317,7 @@
                 left: 80%
                 bottom: 80%
                 z-index: 2
-                transition: all 0.15s
+                transition: all 0.6s
                 background: url('../img/main/home-modules-arrow.svg') bottom left no-repeat
             &::after
                 content: ""
@@ -377,14 +377,7 @@
             background: #1B1A1E
             position: relative
             z-index: 2
-            &::after
-                content: ""
-                width: 0px
-                border-bottom: 60px solid #000
-                border-left: 60px solid transparent
-                position: absolute
-                bottom: 0
-                right: 0
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 60px), calc(100% - 60px) 100%, 0 100% )
         &__logo
             margin-bottom: 70px
         &__el
@@ -527,6 +520,11 @@ a.home-modules__block:hover
     &::before
         width: 25px
         height: 25px
+@media(max-width: 1599px)
+    .main .video
+        overflow: hidden
+        video
+            margin-right: -200px
 @media(max-width: 1449px)
     .home-portfolio .after
         width: 400px
@@ -535,6 +533,8 @@ a.home-modules__block:hover
     .home-portfolio .after
         width: 400px
         right: -250px
+    .main .after
+        display: none
 @media(max-width: 1299px)
     .home-portfolio .after
         width: 300px
@@ -543,7 +543,7 @@ a.home-modules__block:hover
     .main .video
         overflow: hidden
         video
-            margin-right: -200px
+            margin-right: -300px
     .home-brands__el
         img
             max-width: 230px
@@ -647,6 +647,7 @@ a.home-modules__block:hover
             &__cont
                 width: 100%
                 padding: 40px 30px
+                clip-path: none
                 &::after
                     display: none
             &__arrows

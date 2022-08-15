@@ -16,6 +16,7 @@ $(document).ready(function () {
 
         });
         $('video').load();
+        $('video').play();
     }
 
 

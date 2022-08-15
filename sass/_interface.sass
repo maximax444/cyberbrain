@@ -366,9 +366,7 @@
       padding: 20px 50px
 @media(max-width: 1339px)
  .header__menu
-  max-width: 500px
-  flex-wrap: wrap
-  grid-gap: 15px 35px
+  grid-gap: 15px 
   &>li>a
    padding-bottom: 10px
  .header.scrolled
@@ -398,6 +396,8 @@
     right: 0px
     top: -64px
 @media(max-width: 1199px)
+ .header__menu>li>a
+   font-size: 16px
  .footer
   &__partners, &__main
    grid-gap: 15px
@@ -406,7 +406,14 @@
 @media (max-width: 991px)
  .header__menu
   max-width: 300px
-  grid-gap: 15px 25px
+  grid-gap: 15px 10px
+  &>li>a
+   font-size: 14px
+ .header__logo
+  width: 140px
+  left: 56% 
+  svg
+   width: 100%
  .footer
   &__polit
    padding-left: 15px
