@@ -396,7 +396,8 @@
             display: block
             margin-top: 60px
         &__block
-            width: 20%
+            display: block
+            width: 100%
             height: 230px
             border: 1px solid #626162
             padding: 39px
@@ -415,15 +416,18 @@
                 z-index: 2
                 transition: all 0.15s
                 background: url('../img/main/home-modules-arrow.svg') bottom left no-repeat
+        &__el
+            width: 20%
             &:hover
-                background-color: #FEFF00
-                transform: translateY(-20px)
-                &::before
-                    width: 22px
-                    height: 22px
-                .predict-else
-                    &__name
-                        color: #000
+                .predict-else__block
+                    background-color: #FEFF00
+                    transform: translateY(-20px)
+                    &::before
+                        width: 22px
+                        height: 22px
+                    .predict-else
+                        &__name
+                            color: #000
 .media
     &-steps
         padding-bottom: 0
@@ -494,8 +498,9 @@
             &__wrap
                 flex-wrap: wrap
                 justify-content: flex-start
-            &__block
+            &__el
                 width: 33%
+            &__block
                 margin-bottom: -1px
 @media(max-width: 767px)
     .predict
@@ -520,7 +525,7 @@
         &-adap__cont
             width: 100%
         &-else
-            &__block
+            &__el
                 width: 50%
             &__name
                 padding-right: 50px
@@ -597,6 +602,8 @@
                 font-size: 30px
                 line-height: 115.5%
                 max-width: 100%
+            &__el
+                width: 100%
             &__block
                 margin-bottom: 23px
                 padding: 34px 39px

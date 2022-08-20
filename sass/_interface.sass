@@ -39,6 +39,29 @@
   &__large
    width: 100%
    margin: auto
+.preloader
+ background-color: #000
+ display: flex
+ justify-content: center
+ align-items: center
+ position: fixed
+ top: 0
+ left: 0
+ width: 100vw
+ height: 100vh
+ z-index: 99
+ .g1
+  animation: fadeInRightt 3s infinite
+  path
+   animation: fadeInDownn 3s infinite
+   &:nth-child(1), &:nth-child(2)
+    animation: fadeInUpp 3s infinite
+ .g2
+  animation: fadeInLeftt 3s infinite
+  path
+   animation: fadeInDownn 3s infinite
+   &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
+    animation: fadeInUpp 3s infinite
 .section__title
  font-family: 'JetBrains Mono', monospace
  font-weight: 700

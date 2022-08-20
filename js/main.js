@@ -1,8 +1,4 @@
 $(document).ready(function () {
-
-    new WOW({
-        mobile: false,
-    }).init();
     if ($(window).width() >= 768) {
 
         $('video source').each(function () {
@@ -10,18 +6,55 @@ $(document).ready(function () {
 
         });
         $('video').load();
+        $('video').not('.main2 video').trigger('pause');
+        $('video').not('.main2 video').trigger('play');
     } else {
         $('video source').each(function () {
             $(this).attr('src', $(this).attr('data-mob'));
 
         });
+        // if($('.v2 video').length !=0) {
+        //     $('.v2 video').get(0).pause();
+        // }
+        
         $('video').load();
-        $('video').play();
+        // $('video').not('.main2 video').trigger('pause');
+        // $('video').not('.main2 video').trigger('play');
+       
+        // if($('.v2 video').length !=0) {
+        //     $('.v2 video').get(0).pause();
+        //     $('.v2 video').get(0).play();
+        // }
+        // if($('.v3 video').length !=0) {
+        //     $('.v3 video').pause();
+        //     $('.v3 video').play();
+        // }
+        // if($('.v4 video').length !=0) {
+        //     $('.v4 video').play();
+        //     $('.v4 video').trigger('play');
+        // }
+        // if($('.v5 video').length !=0) {
+            let vid = document.querySelector('video');
+            vid.pause();
+            vid.play();
+        // }
+    
     }
 
 
 
 });
+if ($(window).width() >= 768) {
+    $('.header__submenu > a').on('click', function(e) {
+        e.preventDefault();
+    });
+}
+$(window).bind("pageshow", function(event) {
+    if (event.originalEvent.persisted) {
+        window.location.reload();
+    }
+  });
+
 function printTitle() {
     let title = $('.main__title');
     $('.main__title').css('height', title.height());
@@ -194,12 +227,6 @@ $('.header__btn, .home-marketing__btn').not('.blog-mail__btn').on('click', funct
 $('.popup-close').on('click', function (e) {
     $('body').css("overflow", "visible");
     $(this).closest('.overlay').removeClass('overlay-active');
-});
-$('.overlay-call').on('mousedown', function (e) {
-    if (!(($(e.target).parents('.popup-wrap').length) || ($(e.target).hasClass('popup-wrap')))) {
-        $('body').css("overflow", "visible");
-        $('.overlay-call').removeClass('overlay-active');
-    }
 });
 $(".demo form, .overlay form, .blog-mail form").submit(function (r) {
     checkDemo($(this));
